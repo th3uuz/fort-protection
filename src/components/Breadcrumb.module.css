@@ -1,0 +1,43 @@
+.nav {
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.lista li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.lista li:not(:last-child)::after {
+  content: "›";
+}
+
+.lista a,
+.lista span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+.lista a {
+  text-underline-offset: 3px;
+}
+
+.lista a:hover {
+  color: var(--gold);
+}
+
+.lista span {
+  color: var(--paper);
+}

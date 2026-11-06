@@ -1,0 +1,129 @@
+.grade {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.intro {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  padding: clamp(20px, 2.4vw, 36px) clamp(16px, 2vw, 28px) clamp(20px, 2.4vw, 36px) var(--margin);
+}
+
+.introInk {
+  background: var(--ink-2);
+  color: var(--paper);
+}
+
+.intro p {
+  font-size: var(--step-0);
+  line-height: 1.4;
+}
+
+.lista {
+  display: contents;
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  min-width: 0;
+}
+
+.link {
+  position: absolute;
+  inset: 0;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.foto {
+  position: absolute;
+  inset: 0;
+}
+
+.foto img {
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+
+.nome {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--step-1);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+a.link:hover .nome,
+a.link:focus-visible .nome {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+a.link:hover .foto img,
+a.link:focus-visible .foto img {
+  transform: scale(1.05);
+}
+
+.livre {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: var(--gap);
+  list-style: none;
+  padding: 0;
+}
+
+@media (max-width: 800px) {
+  .grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .intro {
+    grid-column: 1 / -1;
+    padding: 24px var(--margin);
+  }
+
+  .item:last-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 8 / 3;
+  }
+
+  .nome {
+    font-size: 1.125rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .foto img {
+    transition: none;
+  }
+}
+
+.espacado {
+  gap: clamp(20px, 2.4vw, 32px);
+  padding: clamp(32px, 4vw, 64px) var(--margin);
+  background: var(--ink-2);
+}
+
+.espacado .intro {
+  gap: 20px;
+  background: var(--ink-3);
+  padding: clamp(24px, 3vw, 40px);
+}
+
+.espacado .intro p {
+  line-height: 1.65;
+}
