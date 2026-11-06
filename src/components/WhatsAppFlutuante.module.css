@@ -1,0 +1,44 @@
+.botao {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #1fa855;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s var(--ease), background-color 0.2s var(--ease);
+}
+
+.botao:hover {
+  background: #25d366;
+  transform: scale(1.06);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (min-width: 801px) {
+  .botao {
+    right: max(24px, env(safe-area-inset-right));
+    bottom: max(24px, env(safe-area-inset-bottom));
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .botao {
+    transition: none;
+  }
+
+  .botao:hover {
+    transform: none;
+  }
+}

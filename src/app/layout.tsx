@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import JsonLd from "@/components/JsonLd";
 import RevealObserver from "@/components/RevealObserver";
+import WhatsAppFlutuante from "@/components/WhatsAppFlutuante";
 import { organizacao } from "@/lib/schema";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main id="conteudo">{children}</main>
         <Footer />
+        <WhatsAppFlutuante />
         <RevealObserver />
         <JsonLd dados={organizacao()} />
       </body>
