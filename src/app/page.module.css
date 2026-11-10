@@ -110,7 +110,7 @@
 }
 
 .servicos {
-  background: var(--blue);
+  background: var(--navy-2);
   color: var(--paper);
   padding-block: clamp(28px, 3.4vw, 48px);
   display: grid;
@@ -374,5 +374,17 @@
 
   .heroFotos {
     display: none;
+  }
+}
+
+@media (min-width: 801px) {
+  .heroAcoes :global(.btn) {
+    background: var(--paper);
+    color: var(--navy);
+  }
+
+  .heroAcoes :global(.btn):hover {
+    background: var(--bg-3);
+    color: var(--navy);
   }
 }
