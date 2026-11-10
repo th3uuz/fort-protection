@@ -80,3 +80,4 @@
 - Home: painéis Pós-obra (posobra-aspirador) e Interinos (interinos-equipe); mosaico de /servicos com acesso-catracas, limpeza-aspirador e recepcao-balcao.
 - Conferido em 1440 e 375 nas 13 páginas: 0 erros de console, 0 overflow, 0 imagens quebradas, 1 H1.
 - Melhoria 23: carrossel de serviços com imagens nítidas (quality 85, sizes para telas 2x; antes servia 384 px q70 para cards de 358 px); /imagens-candidatas adicionada ao .gitignore.
+- Melhoria 24: serviço "Limpeza pós-obra" passou a "Limpeza Pós Obra & Eventos" em nome, H1, title, description, home, link e dúvidas; slug /servicos/limpeza-pos-obra mantido.

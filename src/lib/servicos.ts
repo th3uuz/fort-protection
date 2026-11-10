@@ -192,8 +192,8 @@ export const servicos: Servico[] = [
   },
   {
     slug: "limpeza-pos-obra",
-    nome: "Limpeza pós-obra",
-    h1: "Limpeza pós-obra",
+    nome: "Limpeza Pós Obra & Eventos",
+    h1: "Limpeza Pós Obra & Eventos",
     grupo: "facilities",
     descricao:
       "Nossa empresa se responsabiliza em deixar o seu patrimônio, mais confortável e aconchegante após uma obra de grande e pequeno porte.",
@@ -206,11 +206,11 @@ export const servicos: Servico[] = [
     ],
     duvidas: [
       {
-        pergunta: "Fazem limpeza pós-obra de obra pequena?",
+        pergunta: "Fazem limpeza pós obra de obra pequena?",
         resposta: "Sim. Atendemos obras de grande e pequeno porte.",
       },
       {
-        pergunta: "Quanto custa a limpeza pós-obra por m²?",
+        pergunta: "Quanto custa a limpeza pós obra por m²?",
         resposta:
           "O valor depende da obra. Peça um orçamento sem compromisso.",
       },

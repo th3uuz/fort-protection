@@ -57,10 +57,10 @@ export const paginas: Record<string, PaginaSeo> = {
     h1: "Limpeza e Conservação",
   },
   "/servicos/limpeza-pos-obra": {
-    title: "Limpeza pós-obra em São Paulo | Fort Protection",
+    title: "Limpeza Pós Obra & Eventos em São Paulo | Fort Protection",
     description:
-      "Limpeza pós-obra profissional para obras de pequeno e grande porte em São Paulo. Orçamento sem compromisso: fale com a Fort Protection pelo WhatsApp.",
-    h1: "Limpeza pós-obra",
+      "Limpeza Pós Obra & Eventos em São Paulo, para obras de pequeno e grande porte. Orçamento sem compromisso: fale com a Fort Protection pelo WhatsApp.",
+    h1: "Limpeza Pós Obra & Eventos",
   },
   "/servicos/zeladoria": {
     title: "Zeladoria condominial em São Paulo | Fort Protection",

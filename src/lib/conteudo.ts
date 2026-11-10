@@ -13,7 +13,7 @@ export const home = {
       "Oferecemos soluções completas para proteção patrimonial e segurança de instalações empresariais e residenciais.",
   },
   posObra: {
-    titulo: "Limpeza Pós-Obra Profissional",
+    titulo: "Limpeza Pós Obra & Eventos",
     texto:
       "Nossa empresa se responsabiliza em deixar o seu patrimônio, mais confortável e aconchegante após uma obra de grande e pequeno porte.",
   },

@@ -98,7 +98,7 @@ export default function Home() {
         />
       </section>
 
-      <section className={styles.duplo} aria-label="Limpeza pós-obra e interinos">
+      <section className={styles.duplo} aria-label="Limpeza pós obra & eventos, e interinos">
         <article className={styles.painel} data-reveal>
           <div className={styles.painelFoto}>
             <Image
@@ -114,7 +114,7 @@ export default function Home() {
             <h2>{home.posObra.titulo}</h2>
             <p>{home.posObra.texto}</p>
             <Link className={styles.linkTexto} href="/servicos/limpeza-pos-obra">
-              Limpeza pós-obra
+              Limpeza Pós Obra & Eventos
             </Link>
           </div>
         </article>
