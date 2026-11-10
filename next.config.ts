@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
-    qualities: [70, 75],
+    qualities: [70, 75, 85],
   },
   async redirects() {
     return [

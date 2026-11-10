@@ -226,7 +226,8 @@ export default function ServicosCarrossel({ servicos, titulo, texto, idTitulo }:
                 <ServiceCard
                   servico={s}
                   variante="carrossel"
-                  sizes="(max-width: 560px) 80vw, (max-width: 800px) 45vw, (max-width: 1100px) 33vw, 360px"
+                  sizes="(max-width: 800px) 100vw, 760px"
+                  quality={85}
                 />
               </div>
             );

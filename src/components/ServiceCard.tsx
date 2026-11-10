@@ -8,9 +8,10 @@ type Props = {
   servico: Servico;
   variante?: "grade" | "carrossel";
   sizes?: string;
+  quality?: number;
 };
 
-export default function ServiceCard({ servico, variante = "grade", sizes }: Props) {
+export default function ServiceCard({ servico, variante = "grade", sizes, quality = 70 }: Props) {
   const foto = mosaicos[servico.slug]?.[0];
   return (
     <Link className={`${styles.card} ${styles[variante]}`} href={`/servicos/${servico.slug}`} draggable={false}>
@@ -23,7 +24,7 @@ export default function ServiceCard({ servico, variante = "grade", sizes }: Prop
             draggable={false}
             sizes={sizes ?? "(max-width: 560px) 120px, (max-width: 800px) 50vw, (max-width: 1100px) 33vw, 25vw"}
             style={foto.posicao ? { objectPosition: foto.posicao } : undefined}
-            quality={70}
+            quality={quality}
           />
         </span>
       ) : null}

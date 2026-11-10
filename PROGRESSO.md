@@ -79,3 +79,4 @@
 - src/lib/fotos.ts: novas fotos em primeiro lugar no mosaico de cada serviço (a 1ª é a do card); `fotosInclui` usa a foto nova no bloco "O que inclui" dos serviços com uma foto só (Câmeras, Manobrista, Zeladoria, Interinos). Portaria 24 horas manteve as fotos anteriores (sem foto na lista).
 - Home: painéis Pós-obra (posobra-aspirador) e Interinos (interinos-equipe); mosaico de /servicos com acesso-catracas, limpeza-aspirador e recepcao-balcao.
 - Conferido em 1440 e 375 nas 13 páginas: 0 erros de console, 0 overflow, 0 imagens quebradas, 1 H1.
+- Melhoria 23: carrossel de serviços com imagens nítidas (quality 85, sizes para telas 2x; antes servia 384 px q70 para cards de 358 px); /imagens-candidatas adicionada ao .gitignore.
