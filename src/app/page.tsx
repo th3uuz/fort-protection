@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Headline from "@/components/Headline";
 import JsonLd from "@/components/JsonLd";
-import MarcaBanner from "@/components/MarcaBanner";
 import { perguntasFrequentes, website } from "@/lib/schema";
 import ContactForm from "@/components/ContactForm";
 import SegmentIndex from "@/components/SegmentIndex";
@@ -42,7 +41,6 @@ export default function Home() {
 
       <section className={styles.hero}>
         <div className={styles.heroTexto}>
-          <MarcaBanner />
           <Headline className={styles.h1} linhas={["Segurança patrimonial", "em São Paulo"]} />
           <div className={`${styles.apoio} fade-after`}>
             <p className={styles.slogan}>{home.slogan}</p>

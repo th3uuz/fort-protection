@@ -1,5 +1,4 @@
 import Link from "next/link";
-import MarcaBanner from "./MarcaBanner";
 import Breadcrumb, { type Migalha } from "./Breadcrumb";
 import Headline from "./Headline";
 import Masthead, { type FotoMosaico } from "./Masthead";
@@ -19,7 +18,6 @@ export default function PageHero({ titulo, apoio, migalhas, fotos, banner = fals
   return (
     <section className={`${styles.hero} ${banner ? styles.banner : ""}`}>
       <div className={`${styles.texto} fade-after`}>
-        {banner ? <MarcaBanner /> : null}
         <Breadcrumb itens={migalhas} />
         <Headline className={styles.h1} linhas={[titulo]} />
         {apoio.map((texto) => (
