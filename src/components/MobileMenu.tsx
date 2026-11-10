@@ -89,7 +89,7 @@ export default function MobileMenu({ itens, servicos }: Props) {
           ),
         )}
         <Link href="/contato" className={`btn ${styles.painelCta}`}>
-          Pedir orçamento
+          Solicite um orçamento
         </Link>
       </div>
     </details>

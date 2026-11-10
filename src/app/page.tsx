@@ -55,7 +55,7 @@ export default function Home() {
             <p>{home.apoio}</p>
             <div className={styles.heroAcoes}>
               <a className="btn" href="#orcamento">
-                Pedir orçamento
+                Solicite um orçamento
               </a>
               <Link className={styles.linkTexto} href="/servicos">
                 Ver os 11 serviços
@@ -113,7 +113,7 @@ export default function Home() {
             <h3>Peça seu orçamento</h3>
             <p>Escolha onde você precisa do serviço e quais serviços quer. A mensagem sai pronta.</p>
             <a className="btn" href="#orcamento">
-              Pedir orçamento
+              Solicite um orçamento
             </a>
           </li>
         </ul>

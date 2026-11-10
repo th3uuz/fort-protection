@@ -25,7 +25,7 @@ export default function Header() {
       </Link>
       <HeaderNav itens={nav} servicos={servicos} />
       <Link href="/contato" className={`btn ${styles.cta}`}>
-        Pedir orçamento
+        Solicite um orçamento
       </Link>
       <MobileMenu itens={nav} servicos={servicos} />
     </header>

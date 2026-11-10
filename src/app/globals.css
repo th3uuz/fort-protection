@@ -7,8 +7,8 @@
   --bg: #ffffff;
   --bg-2: #f6f5f8;
   --bg-3: #ebe9ef;
-  --navy: #0F0A14;
-  --navy-2: #07040a;
+  --navy: #0f2a52;
+  --navy-2: #0a1f3f;
   --gold: #0F0A14;
   --gold-deep: #07040a;
   --muted: #475467;
@@ -16,7 +16,6 @@
   --margin-base: clamp(16px, 2.2vw, 32px);
   --margin: max(var(--margin-base), calc((100vw - 1120px) / 2));
   --radius: 8px;
-  --blue: #1f4e9c;
   --axis: 42%;
   --gap-section: clamp(32px, 4vw, 56px);
   --gap: clamp(12px, 1.4vw, 20px);

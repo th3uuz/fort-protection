@@ -55,7 +55,7 @@ export default function ServicosPage() {
                     <h3>Peça seu orçamento</h3>
                     <p>Escolha onde você precisa do serviço e quais serviços quer. A mensagem sai pronta.</p>
                     <Link className="btn" href="/contato">
-                      Pedir orçamento
+                      Solicite um orçamento
                     </Link>
                   </li>
                 ) : null}
