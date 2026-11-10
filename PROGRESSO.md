@@ -56,3 +56,4 @@
 ## Melhoria 16: tema claro (pedido do cliente)
 - Paleta so branco, preto e azul-escuro (#0f2a52 / #0a1f3f); dourado removido. Fundos claros (#fff, #f4f7fb, #e6ecf5), texto preto, azul-escuro em botoes, destaques, indicadores, orcamento, Missao/Visao/Valores e rodape. Hero com banner sob veu azul. Tokens em globals.css (--bg, --bg-2, --bg-3, --navy).
 - Melhoria 17: imagens coloridas (grayscale removido de scripts/crop-images.mjs; 18 imagens regeradas dos originais).
+- Melhoria 18: seção Depoimentos removida da home (dados em conteudo.ts mantidos sem uso).

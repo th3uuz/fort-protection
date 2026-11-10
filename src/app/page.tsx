@@ -10,7 +10,7 @@ import ServiceCard from "@/components/ServiceCard";
 import CountUp from "@/components/CountUp";
 import Duvidas from "@/components/Duvidas";
 import { faq } from "@/lib/faq";
-import { depoimentos, home, indicadores } from "@/lib/conteudo";
+import { home, indicadores } from "@/lib/conteudo";
 import { pageMetadata } from "@/lib/seo";
 import { servicoPorSlug } from "@/lib/servicos";
 import styles from "./page.module.css";
@@ -166,45 +166,6 @@ export default function Home() {
           texto={home.atendemos.texto}
           interativo
         />
-      </section>
-
-      <section className={styles.depoimentos} aria-labelledby="titulo-depoimentos">
-        <div className={`wrap ${styles.depoimentoBox}`}>
-          <h2 id="titulo-depoimentos" data-reveal>
-            Depoimentos
-          </h2>
-          <div className={styles.depoimentoLinha}>
-            {depoimentos.itens.map((item, i) => (
-              <figure key={item.autor} className={styles.depoimento} data-reveal style={{ ["--d" as string]: i + 1 }}>
-                {item.foto ? (
-                  <Image className={styles.fotoAutor} src={item.foto} alt={item.autor} width={120} height={120} />
-                ) : (
-                  <span className={styles.fotoAutor} aria-hidden="true">
-                    {item.iniciais}
-                  </span>
-                )}
-                <figcaption>
-                  <span className={styles.nomeAutor}>{item.autor}</span>
-                  <span className={styles.estrelas} role="img" aria-label="5 de 5 estrelas">
-                    {Array.from({ length: depoimentos.estrelas }, (_, k) => (
-                      <svg key={k} viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false">
-                        <path
-                          d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    ))}
-                  </span>
-                </figcaption>
-                <blockquote className={styles.citacao}>
-                  {item.paragrafos.map((t) => (
-                    <p key={t}>{t}</p>
-                  ))}
-                </blockquote>
-              </figure>
-            ))}
-          </div>
-        </div>
       </section>
 
       <section id="orcamento" className={`field-gold ${styles.orcamento}`} aria-labelledby="titulo-orcamento">
