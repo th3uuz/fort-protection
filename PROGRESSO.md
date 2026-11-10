@@ -87,3 +87,4 @@
 - Título "O que inclui" removido de todas as páginas de serviço (intro e lista mantidas; `aria-label` na seção).
 - PageHero com `banner`: no desktop usa o mesmo banner da home (banner-home sob véu azul, texto à direita, botão Solicite um orçamento) com título e apoio da página; aplicado em /servicos e nas 11 páginas de serviço. No celular segue o mosaico, como na home.
 - Conferido em 1440, 768 e 375 nas 12 páginas: 0 overflow, 0 imagens quebradas, 1 H1, 0 erros de console.
+- Melhoria 26: banner da home também em Sobre Nós (com botão para /contato) e Contato (sem botão, o formulário vem logo abaixo); no celular seguem como antes.

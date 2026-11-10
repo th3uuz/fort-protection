@@ -36,6 +36,8 @@ export default function SobrePage() {
         apoio={[`${sobre.titulo}.`, sobre.apoio]}
         migalhas={[{ href: "/", label: "Início" }, { label: "Sobre Nós" }]}
         fotos={mosaicos.sobre}
+        banner
+        acao={{ href: "/contato", label: "Solicite um orçamento" }}
       />
 
       <section className={styles.secao} aria-labelledby="titulo-quem">

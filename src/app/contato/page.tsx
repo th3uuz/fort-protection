@@ -25,6 +25,7 @@ export default function ContatoPage() {
         titulo={contato.titulo}
         apoio={[contato.apoio]}
         migalhas={[{ href: "/", label: "Início" }, { label: "Contato" }]}
+        banner
       />
 
       <section id="orcamento" className={`field-paper ${styles.formulario}`} aria-labelledby="titulo-orcamento">
