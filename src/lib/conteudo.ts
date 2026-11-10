@@ -110,3 +110,22 @@ export const rodape = {
   titulo: "Segurança",
   texto: "Protegemos seu patrimônio com excelência e confiança.",
 } as const;
+
+export const servicoGeral = {
+  pilaresTitulo: "Por que a Fort Protection",
+  pilares: [
+    {
+      titulo: "Agilidade",
+      texto: "Você fala com a equipe pelo WhatsApp ou por e-mail, e o que sai da rotina é resolvido sem burocracia.",
+    },
+    {
+      titulo: "Competência",
+      texto: "Profissionais qualificados em cada posto, com a rotina combinada com você antes de começar.",
+    },
+    {
+      titulo: "Confiança",
+      texto: "Você acompanha o seu patrimônio com tranquilidade, e a Fort Protection cuida da operação.",
+    },
+  ],
+  areaTexto: "Cada local tem uma rotina própria. Ajustamos o serviço ao funcionamento de cada um.",
+};

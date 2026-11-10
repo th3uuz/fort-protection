@@ -81,3 +81,9 @@
 - Conferido em 1440 e 375 nas 13 páginas: 0 erros de console, 0 overflow, 0 imagens quebradas, 1 H1.
 - Melhoria 23: carrossel de serviços com imagens nítidas (quality 85, sizes para telas 2x; antes servia 384 px q70 para cards de 358 px); /imagens-candidatas adicionada ao .gitignore.
 - Melhoria 24: serviço "Limpeza pós-obra" passou a "Limpeza Pós Obra & Eventos" em nome, H1, title, description, home, link e dúvidas; slug /servicos/limpeza-pos-obra mantido.
+
+## Melhoria 25: textos nas páginas de serviço e banner
+- Páginas de serviço ganharam "Como funciona" (2 parágrafos por serviço em `detalhes`, texto provisório para validação do cliente), bloco "Por que a Fort Protection" (Agilidade, Competência, Confiança; `servicoGeral` em conteudo.ts) e frase de apoio em "Área de atuação". Inspiração nos textos enviados pelo usuário, sem copiar números nem serviços que a Fort não oferece (portaria remota, monitoramento 24 h, bombeiro civil, copeira).
+- Título "O que inclui" removido de todas as páginas de serviço (intro e lista mantidas; `aria-label` na seção).
+- PageHero com `banner`: no desktop usa o mesmo banner da home (banner-home sob véu azul, texto à direita, botão Solicite um orçamento) com título e apoio da página; aplicado em /servicos e nas 11 páginas de serviço. No celular segue o mosaico, como na home.
+- Conferido em 1440, 768 e 375 nas 12 páginas: 0 overflow, 0 imagens quebradas, 1 H1, 0 erros de console.

@@ -168,13 +168,15 @@
 
 .orcamentoTopo {
   display: grid;
+  justify-items: center;
+  text-align: center;
   gap: clamp(8px, 1vw, 12px);
   margin-bottom: clamp(20px, 2.4vw, 32px);
 }
 
 .orcamentoGrade {
   display: grid;
-  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--gap) clamp(20px, 3vw, 40px);
   align-items: stretch;
 }
@@ -183,17 +185,7 @@
   font-size: var(--step-0);
   line-height: 1.45;
   max-width: 60ch;
-}
-
-.orcamentoFoto {
-  border-radius: var(--radius);
-  overflow: hidden;
-  position: relative;
-  min-height: 100%;
-}
-
-.orcamentoFoto img {
-  object-fit: cover;
+  margin-inline: auto;
 }
 
 .orcamentoCaixa {
@@ -228,10 +220,6 @@
 
   .painelTexto {
     align-content: center;
-  }
-
-  .orcamentoGrade {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   }
 }
 
@@ -269,15 +257,6 @@
 
   .painelFoto {
     min-height: 200px;
-  }
-
-  .orcamentoGrade {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .orcamentoFoto {
-    min-height: 0;
-    aspect-ratio: 16 / 9;
   }
 
   .painelTexto p {

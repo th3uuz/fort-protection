@@ -8,6 +8,21 @@
   overflow: hidden;
 }
 
+.faixa {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: minmax(0, 1fr);
+}
+
+@media (max-width: 800px) {
+  .faixa {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .faixa .tile:nth-child(n + 4) {
+    display: none;
+  }
+}
+
 .tile {
   position: relative;
   overflow: hidden;

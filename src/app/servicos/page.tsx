@@ -27,6 +27,8 @@ export default function ServicosPage() {
         apoio={[servicosPagina.apoio]}
         migalhas={[{ href: "/", label: "Início" }, { label: "Serviços" }]}
         fotos={mosaicos.servicos}
+        banner
+        acao={{ href: "/contato", label: "Solicite um orçamento" }}
       />
 
       {ordem.map((grupo, i) => {

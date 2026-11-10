@@ -18,14 +18,24 @@ const tiles: Tile[] = [
   { tipo: "foto", foto: 3, area: "2 / 3 / 3 / 4" },
 ];
 
+const tilesFaixa: Tile[] = [
+  { tipo: "foto", foto: 0, area: "1 / 1 / 2 / 2", destaque: true },
+  { tipo: "foto", foto: 1, area: "1 / 2 / 2 / 3" },
+  { tipo: "cor", area: "1 / 3 / 2 / 4" },
+  { tipo: "foto", foto: 2, area: "1 / 4 / 2 / 5" },
+  { tipo: "foto", foto: 3, area: "1 / 5 / 2 / 6" },
+];
+
 type Props = {
   fotos: FotoMosaico[];
+  variante?: "mosaico" | "faixa";
 };
 
-export default function Masthead({ fotos }: Props) {
+export default function Masthead({ fotos, variante = "mosaico" }: Props) {
+  const faixa = variante === "faixa";
   return (
-    <div className={styles.mosaico}>
-      {tiles.map((tile, i) => {
+    <div className={`${styles.mosaico} ${faixa ? styles.faixa : ""}`}>
+      {(faixa ? tilesFaixa : tiles).map((tile, i) => {
         const estilo = {
           ["--area" as string]: tile.area,
           ["--i" as string]: i,

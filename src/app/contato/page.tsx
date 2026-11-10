@@ -3,7 +3,6 @@ import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/PageHero";
 import { contato, localizacao } from "@/lib/conteudo";
 import { migalhas, paginaContato } from "@/lib/schema";
-import { mosaicos } from "@/lib/fotos";
 import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 import styles from "./contato.module.css";
@@ -26,7 +25,6 @@ export default function ContatoPage() {
         titulo={contato.titulo}
         apoio={[contato.apoio]}
         migalhas={[{ href: "/", label: "Início" }, { label: "Contato" }]}
-        fotos={mosaicos.contato}
       />
 
       <section id="orcamento" className={`field-paper ${styles.formulario}`} aria-labelledby="titulo-orcamento">

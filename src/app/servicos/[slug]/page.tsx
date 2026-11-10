@@ -9,6 +9,7 @@ import ServiceCard from "@/components/ServiceCard";
 import { migalhas, servico as esquemaServico } from "@/lib/schema";
 import { fotosInclui, mosaicos } from "@/lib/fotos";
 import { rotuloServico } from "@/lib/orcamento";
+import { servicoGeral } from "@/lib/conteudo";
 import { pageMetadata } from "@/lib/seo";
 import { segmentoPorSlug } from "@/lib/segmentos";
 import { servicoPorSlug, servicos } from "@/lib/servicos";
@@ -67,9 +68,11 @@ export default async function ServicoPage({ params }: Props) {
           { label: servico.nome },
         ]}
         fotos={mosaicos[servico.slug]}
+        banner
+        acao={{ href: "#titulo-pedir", label: "Solicite um orçamento" }}
       />
 
-      <section className={styles.secao} aria-labelledby="titulo-inclui">
+      <section className={styles.secao} aria-label="O que inclui">
         <div className={`wrap ${styles.inclui}`}>
           <div className={styles.incluiFoto}>
             <Image
@@ -83,7 +86,6 @@ export default async function ServicoPage({ params }: Props) {
             />
           </div>
           <div className={styles.incluiTexto}>
-            <h2 id="titulo-inclui">O que inclui</h2>
             <p className={styles.intro}>{servico.intro}</p>
             <ul className={styles.duasColunas}>
               {servico.inclui.map((item) => (
@@ -94,18 +96,51 @@ export default async function ServicoPage({ params }: Props) {
         </div>
       </section>
 
-      <section className={`${styles.secao} ${styles.ink2}`} aria-labelledby="titulo-onde">
+      <section className={`${styles.secao} ${styles.ink2}`} aria-labelledby="titulo-como">
+        <div className={`wrap ${styles.como}`}>
+          <h2 id="titulo-como" data-reveal>
+            Como funciona
+          </h2>
+          <div className={styles.paragrafos} data-reveal style={{ ["--d" as string]: 1 }}>
+            {servico.detalhes.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={`field-gold ${styles.mvv}`} aria-labelledby="titulo-pilares">
+        <div className="wrap">
+          <h2 id="titulo-pilares" className={styles.mvvTitulo} data-reveal>
+            {servicoGeral.pilaresTitulo}
+          </h2>
+          <div className={styles.mvvGrade}>
+            {servicoGeral.pilares.map((p, i) => (
+              <div className={styles.mvvItem} key={p.titulo} data-reveal style={{ ["--d" as string]: i }}>
+                <span className={styles.icone} aria-hidden="true">
+                  {i + 1}
+                </span>
+                <h3>{p.titulo}</h3>
+                <p className={styles.pilarTexto}>{p.texto}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.secao} aria-labelledby="titulo-onde">
         <div className="wrap">
           <div className={styles.topo}>
             <h2 id="titulo-onde" data-reveal>
               Área de atuação
             </h2>
+            <p className={styles.texto}>{servicoGeral.areaTexto}</p>
           </div>
           <SegmentTiles itens={atendidos} />
         </div>
       </section>
 
-      <section className={styles.secao} aria-labelledby="titulo-duvidas">
+      <section className={`${styles.secao} ${styles.ink2}`} aria-labelledby="titulo-duvidas">
         <div className="wrap">
           <h2 id="titulo-duvidas" className={styles.duvidasTitulo} data-reveal>
             {tituloDuvidas}
@@ -130,7 +165,7 @@ export default async function ServicoPage({ params }: Props) {
         </div>
       </section>
 
-      <section className={`${styles.secao} ${styles.ink2}`} aria-labelledby="titulo-outros">
+      <section className={styles.secao} aria-labelledby="titulo-outros">
         <div className="wrap">
           <div className={styles.topo}>
             <h2 id="titulo-outros" data-reveal>

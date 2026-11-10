@@ -12,6 +12,7 @@ export type Servico = {
   grupo: Grupo;
   descricao: string;
   intro: string;
+  detalhes: string[];
   inclui: string[];
   duvidas: Duvida[];
   segmentos: string[];
@@ -37,6 +38,10 @@ export const servicos: Servico[] = [
       "Serviço de portaria 24 horas contínua para garantir a segurança de sua propriedade e ativos.",
     intro:
       "Um porteiro no posto em todos os turnos, inclusive madrugadas, fins de semana e feriados. Nas férias dele, um interino assume.",
+    detalhes: [
+      "A portaria é o primeiro filtro de um condomínio ou de uma empresa. Com um porteiro em cada turno, quem chega é identificado antes de entrar e o que acontece no posto fica registrado.",
+      "Combinamos com você as regras do local: quem pode entrar, como avisar os moradores e quem acionar quando algo sai da rotina. A equipe segue essas regras em todos os turnos e, nas férias do porteiro, um interino cobre o posto.",
+    ],
     inclui: [
       "controle de entrada de moradores, visitantes e prestadores",
       "recebimento de encomendas e correspondências",
@@ -72,6 +77,10 @@ export const servicos: Servico[] = [
     descricao: "Ajuda, auxilia e elabora organizações no local.",
     intro:
       "Quem entra passa por alguém que confere. Para recepções, portões e entradas de serviço com movimento.",
+    detalhes: [
+      "Em entradas com muito movimento, o fluxo vira fila e fica mais fácil alguém passar sem ser identificado. O controlador confere a autorização, registra quem passou e orienta quem chega.",
+      "A rotina é ajustada ao local: horários de pico, entradas de serviço e áreas de acesso restrito. Ele trabalha junto com a portaria ou a recepção, para que a informação circule entre quem está nos postos.",
+    ],
     inclui: [
       "identificação e registro de visitantes e prestadores",
       "conferência da autorização antes de liberar",
@@ -107,6 +116,10 @@ export const servicos: Servico[] = [
       "Sistemas de segurança eletrônica para beneficiar ainda mais seu patrimônio. Instalação de alarmes e câmeras para proteção eficaz contra invasões.",
     intro:
       "Câmeras e alarmes instalados nos pontos por onde alguém entraria.",
+    detalhes: [
+      "Antes de instalar, avaliamos o local: entradas, pontos de passagem e áreas que mais precisam de cobertura. Com isso, indicamos onde ficam as câmeras e os alarmes.",
+      "Depois da instalação, orientamos moradores ou equipe sobre o uso no dia a dia. O objetivo é proteger o patrimônio contra invasões com um sistema que o cliente sabe operar.",
+    ],
     inclui: [
       "visita para avaliar entradas e áreas a cobrir",
       "instalação de câmeras e alarmes",
@@ -140,6 +153,10 @@ export const servicos: Servico[] = [
     descricao:
       "O manobrista vai facilitar que seu acesso seja mais rápido no local e com toda certeza vai monitorar o seu patrimônio (Veículo).",
     intro: "O carro é recebido na entrada e estacionado, sem fila no portão.",
+    detalhes: [
+      "O manobrista recebe o veículo na entrada, estaciona e devolve na saída. Quem chega não precisa procurar vaga, e a fila no portão diminui.",
+      "O serviço atende condomínios, empresas e hospitais, onde o carro precisa de atenção enquanto está no local. Combinamos com você os horários, o número de vagas e o fluxo de entrada e saída.",
+    ],
     inclui: [
       "recepção do veículo",
       "estacionamento e retirada",
@@ -169,6 +186,10 @@ export const servicos: Servico[] = [
       "Serviço de limpeza e Conservação, mantém um ambiente bem mais aconchegante e organizado.",
     intro:
       "Limpeza diária das áreas comuns em uma escala combinada com você.",
+    detalhes: [
+      "A limpeza segue uma rotina combinada com você: quais áreas, em quais dias e em quais horários. Assim a equipe não atrapalha o movimento do local e o ambiente está em ordem quando as pessoas chegam.",
+      "Além da limpeza do dia a dia, cuidamos da conservação de pisos, vidros e superfícies, para que o espaço mantenha a boa aparência com o tempo. Em escolas, hospitais e empresas, a escala se ajusta ao funcionamento de cada local.",
+    ],
     inclui: [
       "limpeza de áreas comuns, recepções e escritórios",
       "conservação de pisos, vidros e superfícies",
@@ -199,6 +220,10 @@ export const servicos: Servico[] = [
       "Nossa empresa se responsabiliza em deixar o seu patrimônio, mais confortável e aconchegante após uma obra de grande e pequeno porte.",
     intro:
       "Depois da reforma, sobra poeira fina em tudo. A equipe deixa o lugar pronto para uso, seja a obra pequena ou grande.",
+    detalhes: [
+      "Depois de uma obra, o pó fino se espalha por pisos, vidros, esquadrias e azulejos, e o espaço ainda não está pronto para uso. A limpeza retira os resíduos e deixa o ambiente liberado para quem vai ocupá-lo. A limpeza de eventos segue a mesma ideia: o espaço volta a ficar em ordem logo depois.",
+      "Atendemos obras pequenas e grandes. Conte o tipo de obra e o tamanho da área no pedido de orçamento, e combinamos o prazo e a equipe.",
+    ],
     inclui: [
       "remoção de poeira e resíduos",
       "limpeza de pisos, vidros, esquadrias e azulejos",
@@ -227,6 +252,10 @@ export const servicos: Servico[] = [
     descricao:
       "Análise de riscos e elaboração de estratégias personalizadas para proteger seu patrimônio.",
     intro: "Alguém que conhece o prédio e cuida dele no dia a dia.",
+    detalhes: [
+      "O zelador conhece a rotina do condomínio ou da empresa e acompanha o que acontece nas áreas comuns. Ele percebe cedo o que precisa de reparo e avisa o síndico ou a administração.",
+      "Também acompanha os prestadores que entram para fazer algum serviço, para que o trabalho seja feito como combinado e o local fique em ordem depois.",
+    ],
     inclui: [
       "verificação das áreas comuns",
       "acompanhamento de prestadores",
@@ -251,6 +280,10 @@ export const servicos: Servico[] = [
     descricao: "Troca e concerto de uma necessidade do condomínio.",
     intro:
       "As trocas e os consertos que o condomínio precisa, sem esperar um técnico avulso.",
+    detalhes: [
+      "Trocas de lâmpadas e pequenos reparos se acumulam quando ninguém cuida deles. A manutenção predial resolve essas falhas do dia a dia com rotina, sem esperar um técnico avulso.",
+      "Quando o problema exige um especialista, acompanhamos o prestador e avisamos a administração. Conte sua necessidade no pedido de orçamento para combinarmos o que entra no serviço.",
+    ],
     inclui: [
       "pequenas trocas e reparos do dia a dia",
       "acompanhamento de prestadores especializados",
@@ -275,6 +308,10 @@ export const servicos: Servico[] = [
     descricao:
       "Serviço de Jardinagem, ajuda na priorização de insetos e ajuda a ter um ambiente mais elegante.",
     intro: "Áreas verdes podadas e cuidadas em uma frequência combinada.",
+    detalhes: [
+      "Poda, corte de grama, limpeza de canteiros e rega entram em uma frequência combinada com você. Áreas verdes cuidadas deixam o local mais agradável e bem apresentado.",
+      "Atendemos condomínios, empresas, casas e escolas. A frequência e o tamanho da equipe dependem da área a cuidar.",
+    ],
     inclui: [
       "poda e corte de grama",
       "limpeza de canteiros",
@@ -300,6 +337,10 @@ export const servicos: Servico[] = [
       "Serviço de recepcionista/mensageiro facilita muito na necessidade do condomínio ou empresa.",
     intro:
       "Alguém na recepção para atender, anunciar e levar o que precisa ser levado.",
+    detalhes: [
+      "A recepção é o primeiro contato de quem chega. O recepcionista atende o visitante, anuncia a chegada e atende o telefone, e o mensageiro leva documentos e encomendas dentro do local.",
+      "Em condomínios, empresas e hospitais, isso libera a equipe para o trabalho principal. Definimos com você o horário e as tarefas de cada posto.",
+    ],
     inclui: [
       "atendimento de visitantes",
       "atendimento telefônico e recados",
@@ -329,6 +370,10 @@ export const servicos: Servico[] = [
       "Interinos na disposição para efetuar a cobertura do posto, do seu funcionário(a).",
     intro:
       "Quando seu funcionário sai de férias, um interino da Fort Protection assume o posto.",
+    detalhes: [
+      "Férias e faltas deixam o posto descoberto. O interino da Fort Protection assume o lugar do seu funcionário e segue a rotina do local.",
+      "Combinamos as datas com antecedência, para organizar a cobertura. Atendemos portaria, zeladoria, limpeza e recepção.",
+    ],
     inclui: [
       "interino para portaria, zeladoria, limpeza e recepção",
       "combinado com antecedência",
