@@ -23,8 +23,9 @@ export const home = {
       "Interinos na disposição para efetuar a cobertura do posto, do seu funcionário(a).",
   },
   atendemos: {
-    titulo: "Quem nós atendemos ?",
-    texto: "Explore nossas soluções em segurança patrimonial e facilities.",
+    titulo: "Área de atuação",
+    texto:
+      "Segurança patrimonial, portaria, controle de acesso, vigilância e facilities para condomínios, empresas, casas, galpões, hospitais, escolas e indústrias em São Paulo. Escolha o tipo de local e conheça os serviços ideais para proteger o seu patrimônio.",
   },
 } as const;
 
@@ -32,7 +33,7 @@ export const indicadores = [
   { valor: "+5", rotulo: "Anos atuando no mercado" },
   { valor: "+100", rotulo: "Clientes atendidos" },
   { valor: "11", rotulo: "Serviços de segurança e facilities" },
-  { valor: "7", rotulo: "Tipos de locais atendidos" },
+  { valor: "7", rotulo: "Tipos de locais na área de atuação" },
 ] as const;
 
 export const depoimentos = {

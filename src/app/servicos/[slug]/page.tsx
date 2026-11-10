@@ -98,7 +98,7 @@ export default async function ServicoPage({ params }: Props) {
         <div className="wrap">
           <div className={styles.topo}>
             <h2 id="titulo-onde" data-reveal>
-              Onde atendemos
+              Área de atuação
             </h2>
           </div>
           <SegmentTiles itens={atendidos} />
