@@ -80,7 +80,7 @@
 .campo input:hover,
 .campo textarea:hover,
 .campo select:hover {
-  background: #d6dfec;
+  background: #dfdce6;
 }
 
 .campo input[aria-invalid="true"],
@@ -107,7 +107,7 @@
 }
 
 .multiBotao:hover {
-  background: #d6dfec;
+  background: #dfdce6;
 }
 
 .multiBotao:focus-visible {

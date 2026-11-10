@@ -423,7 +423,7 @@
   .hero {
     grid-template-columns: var(--axis) minmax(0, 1fr);
     background-color: var(--navy-2);
-    background-image: linear-gradient(rgb(8 22 48 / 0.58), rgb(8 22 48 / 0.58)), url("/images/banner-home.jpg");
+    background-image: linear-gradient(rgb(15 10 20 / 0.58), rgb(15 10 20 / 0.58)), url("/images/banner-home.jpg");
     background-size: cover;
     background-position: center 55%;
     background-repeat: no-repeat;
