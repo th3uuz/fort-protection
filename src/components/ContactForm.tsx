@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 import styles from "./ContactForm.module.css";
 
 type Estado = "ocioso" | "enviando" | "sucesso" | "falha";
-type Erros = Partial<Record<"nome" | "email" | "mensagem" | "outro", string>>;
+type Erros = Partial<Record<"nome" | "email" | "telefone" | "mensagem" | "outro", string>>;
 
 const padraoEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -68,10 +68,11 @@ export default function ContactForm() {
     [segmento, outroLocal, servicosSel],
   );
 
-  const validar = (nome: string, email: string, mensagem: string) => {
+  const validar = (nome: string, email: string, telefone: string, mensagem: string) => {
     const novos: Erros = {};
     if (nome.trim().length < 2) novos.nome = "Informe seu nome.";
     if (!padraoEmail.test(email.trim())) novos.email = "Informe um e-mail válido.";
+    if (telefone.replace(/\D/g, "").length < 10) novos.telefone = "Informe um telefone com DDD.";
     if (segmento === "outro" && outroLocal.trim().length < 2) novos.outro = "Informe onde você precisa do serviço.";
     if (mensagem.trim().length < 3) novos.mensagem = "Escreva sua mensagem.";
     return novos;
@@ -86,7 +87,7 @@ export default function ContactForm() {
     const mensagem = String(dados.get("mensagem") ?? "");
     const armadilha = String(dados.get("empresa_site") ?? "");
 
-    const novos = validar(nome, email, mensagem);
+    const novos = validar(nome, email, telefone, mensagem);
     setErros(novos);
     if (Object.keys(novos).length > 0) return;
 
@@ -165,14 +166,22 @@ export default function ContactForm() {
           ) : null}
         </div>
         <div className={styles.campo} data-reveal style={{ ["--d" as string]: 2 }}>
-          <label htmlFor="cf-telefone">Telefone (opcional)</label>
+          <label htmlFor="cf-telefone">Telefone*</label>
           <input
             id="cf-telefone"
             name="telefone"
             type="tel"
             inputMode="tel"
             autoComplete="tel"
+            required
+            aria-invalid={erros.telefone ? true : undefined}
+            aria-describedby={erros.telefone ? "cf-telefone-erro" : undefined}
           />
+          {erros.telefone ? (
+            <p className={styles.erro} id="cf-telefone-erro">
+              {erros.telefone}
+            </p>
+          ) : null}
         </div>
         <div className={styles.campo} data-reveal style={{ ["--d" as string]: 3 }}>
           <label htmlFor={`${uid}-onde`}>Onde você precisa do serviço?</label>
