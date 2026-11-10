@@ -221,7 +221,7 @@
 @media (max-width: 800px) {
   .hero {
     grid-template-columns: minmax(0, 1fr);
-    background-color: #1f222e;
+    background-color: var(--navy-2);
     color: var(--paper);
   }
 

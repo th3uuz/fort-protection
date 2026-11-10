@@ -115,7 +115,7 @@
   .banner {
     gap: 0;
     padding-block: 0;
-    background-color: #1f222e;
+    background-color: var(--navy-2);
     color: var(--paper);
   }
 
