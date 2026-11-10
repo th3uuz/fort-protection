@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import Duvidas from "@/components/Duvidas";
 import JsonLd from "@/components/JsonLd";
@@ -8,7 +7,7 @@ import PageHero from "@/components/PageHero";
 import SegmentTiles from "@/components/SegmentTiles";
 import ServiceCard from "@/components/ServiceCard";
 import { migalhas, servico as esquemaServico } from "@/lib/schema";
-import { mosaicos } from "@/lib/fotos";
+import { fotosInclui, mosaicos } from "@/lib/fotos";
 import { rotuloServico } from "@/lib/orcamento";
 import { pageMetadata } from "@/lib/seo";
 import { segmentoPorSlug } from "@/lib/segmentos";
@@ -39,7 +38,8 @@ export default async function ServicoPage({ params }: Props) {
   const atendidos = servico.segmentos
     .map((s) => segmentoPorSlug(s))
     .filter((s) => s !== undefined);
-  const fotoInclui = mosaicos[servico.slug][1] ?? mosaicos[servico.slug][0];
+  const fotoInclui =
+    fotosInclui[servico.slug] ?? mosaicos[servico.slug][1] ?? mosaicos[servico.slug][0];
   const mensagem = `Olá, quero um orçamento de ${rotuloServico(servico.slug, servico.nome)}.`;
   const whatsapp = `${site.whatsapp}?text=${encodeURIComponent(mensagem)}`;
   const rotulo = rotuloServico(servico.slug, servico.nome);
@@ -106,26 +106,26 @@ export default async function ServicoPage({ params }: Props) {
       </section>
 
       <section className={styles.secao} aria-labelledby="titulo-duvidas">
-        <div className={`wrap ${styles.duvidasGrade}`}>
-          <div className={styles.duvidasLista}>
-            <h2 id="titulo-duvidas" data-reveal>
-              {tituloDuvidas}
-            </h2>
-            <div data-reveal style={{ ["--d" as string]: 1 }}>
-              <Duvidas itens={servico.duvidas} />
-            </div>
+        <div className="wrap">
+          <h2 id="titulo-duvidas" className={styles.duvidasTitulo} data-reveal>
+            {tituloDuvidas}
+          </h2>
+          <div className={styles.duvidasLista} data-reveal style={{ ["--d" as string]: 1 }}>
+            <Duvidas itens={servico.duvidas} />
           </div>
-          <div className={`field-gold ${styles.pedir}`} data-reveal style={{ ["--d" as string]: 1 }}>
+        </div>
+      </section>
+
+      <section className={`field-gold ${styles.pedir}`} aria-labelledby="titulo-pedir">
+        <div className={`wrap ${styles.pedirFaixa}`}>
+          <div className={styles.pedirTexto} data-reveal>
             <h2 id="titulo-pedir">{tituloPedir}</h2>
             <p>{mensagem}</p>
-            <div className={styles.acoes}>
-              <a className="btn" href={whatsapp} rel="noopener noreferrer" target="_blank">
-                Enviar pelo WhatsApp
-              </a>
-              <Link className={styles.link} href="/contato">
-                Ver todas as opções
-              </Link>
-            </div>
+          </div>
+          <div className={styles.acoes} data-reveal style={{ ["--d" as string]: 1 }}>
+            <a className="btn" href={whatsapp} rel="noopener noreferrer" target="_blank">
+              Enviar pelo WhatsApp
+            </a>
           </div>
         </div>
       </section>

@@ -73,3 +73,9 @@
 - Orçamento da home: título e subtítulo acima da foto e do formulário; foto acompanha a altura do formulário; botão de envio com fundo --navy.
 - FAQ (home e páginas de serviço): perguntas de 26 para 22 px e respostas de 19 para 17 px no desktop.
 - Conferido em 1440, 768 e 375: 0 erros de console, 0 overflow.
+
+## Melhoria 22: fotos por serviço (imagens-candidatas)
+- 16 fotos escolhidas pelo usuário (Unsplash, Pixabay, Pexels) tratadas em scripts/crop-images.mjs (1200 px, mesmo ajuste de brilho) e salvas em public/images.
+- src/lib/fotos.ts: novas fotos em primeiro lugar no mosaico de cada serviço (a 1ª é a do card); `fotosInclui` usa a foto nova no bloco "O que inclui" dos serviços com uma foto só (Câmeras, Manobrista, Zeladoria, Interinos). Portaria 24 horas manteve as fotos anteriores (sem foto na lista).
+- Home: painéis Pós-obra (posobra-aspirador) e Interinos (interinos-equipe); mosaico de /servicos com acesso-catracas, limpeza-aspirador e recepcao-balcao.
+- Conferido em 1440 e 375 nas 13 páginas: 0 erros de console, 0 overflow, 0 imagens quebradas, 1 H1.

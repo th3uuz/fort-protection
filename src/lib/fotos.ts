@@ -26,6 +26,22 @@ const alts: Record<string, string> = {
   recepcao: "Atendente ao telefone em uma mesa de recepção",
   "controle-acesso":
     "Ponto de inspeção com esteira e câmeras na entrada de um terminal",
+  "acesso-catracas": "Catracas com leitor de acesso em um saguão de prédio",
+  "acesso-lobby": "Saguão de prédio com bloqueadores metálicos no piso e parede de vidro",
+  "cameras-parede": "Duas câmeras de segurança tipo domo fixadas na quina de uma parede",
+  "manobrista-chave": "Mão entregando a chave de um carro",
+  "limpeza-aspirador": "Profissional de limpeza de luvas aspirando o carpete de um escritório",
+  "limpeza-corredor": "Auxiliar de limpeza com carrinho e esfregão em um corredor de prédio",
+  "posobra-aspirador": "Aspirador industrial no piso de um cômodo logo após a obra",
+  "posobra-salao": "Salão amplo em fase final de obra com escada e tubulações no piso",
+  "zeladoria-reparo": "Profissional de luvas instalando uma luminária com parafusadeira",
+  "manutencao-quadro": "Eletricista de capacete diante de um quadro de distribuição elétrica",
+  "manutencao-multimetro": "Técnico medindo um circuito elétrico com multímetro",
+  "jardinagem-cerca": "Jardineiro uniformizado podando uma cerca viva com tesoura",
+  "jardinagem-arbusto": "Mãos de jardineiro podando um arbusto com tesoura",
+  "recepcao-balcao": "Recepcionistas em um balcão de atendimento, uma delas ao telefone",
+  "recepcao-lobby": "Recepcionista atrás do balcão de um saguão movimentado",
+  "interinos-equipe": "Equipe de três profissionais de macacão laranja com aspiradores",
 };
 
 export function foto(nome: string, posicao?: string): Foto {
@@ -40,23 +56,39 @@ const grupo = (...nomes: string[]) => nomes.map((n) => foto(n));
 
 export const mosaicos: Record<string, Foto[]> = {
   sobre: grupo("condominios-base", "empresas-topo", "casas-topo", "escolas-topo"),
-  servicos: grupo("cameras-celular", "limpeza", "controle-acesso", "recepcao"),
+  servicos: grupo("cameras-celular", "limpeza-aspirador", "acesso-catracas", "recepcao-balcao"),
   contato: grupo("cameras-cidade", "casas-topo", "empresas-base", "hospitais-base"),
   "portaria-24-horas": grupo("condominios-topo", "condominios-base", "empresas-topo", "casas-topo"),
-  "controlador-de-acesso": grupo("controle-acesso", "hospitais-base", "escolas-topo", "galpoes-base"),
-  "alarmes-e-cameras": grupo("cameras-celular", "cameras-cidade", "casas-topo", "galpoes-topo"),
-  manobrista: grupo("casas-base", "condominios-base", "empresas-base", "industrias-base"),
-  "limpeza-e-conservacao": [
-    foto("limpeza", "50% 0%"),
-    ...grupo("hospitais-base", "escolas-base", "empresas-base"),
+  "controlador-de-acesso": grupo("acesso-catracas", "acesso-lobby", "controle-acesso", "galpoes-base"),
+  "alarmes-e-cameras": [
+    foto("cameras-parede", "50% 15%"),
+    ...grupo("cameras-celular", "cameras-cidade", "casas-topo"),
   ],
+  manobrista: grupo("manobrista-chave", "casas-base", "condominios-base", "empresas-base"),
+  "limpeza-e-conservacao": grupo("limpeza-aspirador", "limpeza-corredor", "hospitais-base", "escolas-base"),
   "limpeza-pos-obra": [
-    foto("limpeza", "50% 100%"),
-    ...grupo("casas-topo", "galpoes-base", "condominios-base"),
+    foto("posobra-aspirador", "50% 65%"),
+    ...grupo("posobra-salao", "galpoes-base", "condominios-base"),
   ],
-  zeladoria: grupo("condominios-base", "escolas-base", "casas-base", "empresas-topo"),
-  manutencao: grupo("galpoes-topo", "industrias-base", "condominios-topo", "hospitais-base"),
-  jardinagem: grupo("escolas-base", "casas-topo", "condominios-base", "empresas-topo"),
-  "mensageiro-e-recepcionista": grupo("recepcao", "empresas-topo", "condominios-topo", "hospitais-base"),
-  "interinos": grupo("empresas-topo", "recepcao", "condominios-base", "escolas-topo"),
+  zeladoria: [
+    foto("zeladoria-reparo", "50% 15%"),
+    ...grupo("condominios-base", "escolas-base", "casas-base"),
+  ],
+  manutencao: [
+    foto("manutencao-quadro", "50% 40%"),
+    ...grupo("manutencao-multimetro", "galpoes-topo", "industrias-base"),
+  ],
+  jardinagem: grupo("jardinagem-cerca", "jardinagem-arbusto", "escolas-base", "casas-topo"),
+  "mensageiro-e-recepcionista": grupo("recepcao-balcao", "recepcao-lobby", "empresas-topo", "hospitais-base"),
+  "interinos": [
+    foto("interinos-equipe", "50% 55%"),
+    ...grupo("empresas-topo", "condominios-base", "escolas-topo"),
+  ],
+};
+
+export const fotosInclui: Record<string, Foto> = {
+  "alarmes-e-cameras": foto("cameras-parede", "50% 20%"),
+  manobrista: foto("manobrista-chave"),
+  zeladoria: foto("zeladoria-reparo", "50% 20%"),
+  interinos: foto("interinos-equipe", "50% 60%"),
 };

@@ -67,6 +67,33 @@ await simples("servico-interfone-1.jpg", "limpeza.jpg", 1200);
 await simples("servico-seguranca-1.jpg", "recepcao.jpg", 612);
 await simples("stock-aeroporto-fila-seguranca.jpg", "controle-acesso.jpg", 1200);
 
+const candidata = (origem) => path.join(root, "imagens-candidatas", origem);
+
+const servicos = [
+  ["unsplash/controle-acesso-1", "acesso-catracas"],
+  ["pixabay/controle-acesso-2", "acesso-lobby"],
+  ["unsplash/cameras-2", "cameras-parede"],
+  ["pexels/manobrista-2", "manobrista-chave"],
+  ["unsplash/limpeza-1", "limpeza-aspirador"],
+  ["pixabay/limpeza-1", "limpeza-corredor"],
+  ["pexels/limpeza-pos-obra-2", "posobra-aspirador"],
+  ["unsplash/limpeza-pos-obra-2", "posobra-salao"],
+  ["pexels/zeladoria-2", "zeladoria-reparo"],
+  ["pixabay/manutencao-1", "manutencao-quadro"],
+  ["pexels/manutencao-1", "manutencao-multimetro"],
+  ["pexels/jardinagem-1", "jardinagem-cerca"],
+  ["unsplash/jardinagem-2", "jardinagem-arbusto"],
+  ["pixabay/recepcionista-1", "recepcao-balcao"],
+  ["pixabay/recepcionista-2", "recepcao-lobby"],
+  ["pexels/interinos-2", "interinos-equipe"],
+];
+
+for (const [origem, destino] of servicos) {
+  await treat(sharp(candidata(origem + ".jpg")).resize({ width: 1200, withoutEnlargement: true }))
+    .jpeg(jpeg)
+    .toFile(out(destino + ".jpg"));
+}
+
 await sharp(src("logo-fort-protection.png"))
   .resize(512, 512)
   .png()

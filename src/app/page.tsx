@@ -102,11 +102,11 @@ export default function Home() {
         <article className={styles.painel} data-reveal>
           <div className={styles.painelFoto}>
             <Image
-              src="/images/limpeza.jpg"
-              alt="Profissional de limpeza uniformizado passando mop no piso de um corredor envidraçado"
+              src="/images/posobra-aspirador.jpg"
+              alt="Aspirador industrial no piso de um cômodo logo após a obra"
               fill
               sizes="(max-width: 560px) 100vw, (max-width: 1100px) 40vw, 560px"
-              style={{ objectPosition: "50% 100%" }}
+              style={{ objectPosition: "50% 65%" }}
               quality={75}
             />
           </div>
@@ -121,8 +121,9 @@ export default function Home() {
         <article className={`${styles.painel} ${styles.painelAlt}`} data-reveal style={{ ["--d" as string]: 1 }}>
           <div className={styles.painelFoto}>
             <Image
-              src="/images/recepcao.jpg"
-              alt="Atendente ao telefone em uma mesa de recepção"
+              src="/images/interinos-equipe.jpg"
+              alt="Equipe de três profissionais de macacão laranja com aspiradores"
+              style={{ objectPosition: "50% 55%" }}
               fill
               sizes="(max-width: 560px) 100vw, (max-width: 1100px) 40vw, 560px"
               quality={75}
@@ -157,15 +158,6 @@ export default function Home() {
           </p>
         </div>
         <div className={`wrap ${styles.orcamentoGrade}`}>
-          <div className={styles.orcamentoFoto} data-reveal style={{ ["--d" as string]: 2 }}>
-            <Image
-              src="/images/cameras-celular.jpg"
-              alt="Câmera de segurança no teto e celular com as imagens de quatro ambientes"
-              fill
-              sizes="(max-width: 800px) 100vw, 800px"
-              quality={75}
-            />
-          </div>
           <div className={`field-paper ${styles.orcamentoCaixa}`} data-reveal style={{ ["--d" as string]: 1 }}>
             <ContactForm />
           </div>
