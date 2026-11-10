@@ -92,3 +92,4 @@
 - Melhoria 28: faixa de logo e nome removida do banner mobile (duplicava o cabeçalho); MarcaBanner excluído.
 - Melhoria 29: --navy-2 passou a #1f222e; banners mobile usam a variável.
 - Melhoria 30: foto das páginas de serviço com véu escuro leve e logo no canto inferior direito; "Como funciona" com título no topo e texto abaixo, centralizados.
+- Melhoria 31: pilares das páginas de serviço com título menor e padding lateral reduzido; "Competência" não vaza mais da coluna e os 3 blocos ficam centralizados (centros medidos em 1440, 1100 e 800 px).

@@ -123,7 +123,7 @@ export default async function ServicoPage({ params }: Props) {
           </h2>
           <div className={styles.mvvGrade}>
             {servicoGeral.pilares.map((p, i) => (
-              <div className={styles.mvvItem} key={p.titulo} data-reveal style={{ ["--d" as string]: i }}>
+              <div className={`${styles.mvvItem} ${styles.pilar}`} key={p.titulo} data-reveal style={{ ["--d" as string]: i }}>
                 <span className={styles.icone} aria-hidden="true">
                   {i + 1}
                 </span>
