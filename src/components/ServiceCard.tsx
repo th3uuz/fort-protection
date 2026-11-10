@@ -6,19 +6,22 @@ import styles from "./ServiceCard.module.css";
 
 type Props = {
   servico: Servico;
+  variante?: "grade" | "carrossel";
+  sizes?: string;
 };
 
-export default function ServiceCard({ servico }: Props) {
+export default function ServiceCard({ servico, variante = "grade", sizes }: Props) {
   const foto = mosaicos[servico.slug]?.[0];
   return (
-    <Link className={styles.card} href={`/servicos/${servico.slug}`}>
+    <Link className={`${styles.card} ${styles[variante]}`} href={`/servicos/${servico.slug}`} draggable={false}>
       {foto ? (
         <span className={styles.foto}>
           <Image
             src={foto.src}
             alt={foto.alt}
             fill
-            sizes="(max-width: 560px) 120px, (max-width: 800px) 50vw, (max-width: 1100px) 33vw, 25vw"
+            draggable={false}
+            sizes={sizes ?? "(max-width: 560px) 120px, (max-width: 800px) 50vw, (max-width: 1100px) 33vw, 25vw"}
             style={foto.posicao ? { objectPosition: foto.posicao } : undefined}
             quality={70}
           />

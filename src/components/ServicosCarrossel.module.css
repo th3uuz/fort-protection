@@ -1,0 +1,153 @@
+.carrossel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px 32px;
+  padding-inline: var(--margin);
+}
+
+.texto {
+  margin-top: 8px;
+  font-size: var(--step-0);
+  max-width: 60ch;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contador {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--step-1);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  margin-right: 12px;
+}
+
+.contadorTotal {
+  opacity: 0.5;
+}
+
+.botao {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 0.3);
+  background: transparent;
+  color: var(--paper);
+  cursor: pointer;
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.botao:hover {
+  background: var(--paper);
+  border-color: var(--paper);
+  color: var(--navy);
+}
+
+.janela {
+  --per: 5;
+  margin-inline: var(--margin);
+  overflow: clip;
+  overflow-clip-margin: 6px;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.trilho {
+  display: flex;
+  gap: var(--gap);
+  transform: translateX(calc(var(--i) * -1 * (100% + var(--gap)) / var(--per)));
+}
+
+.animar {
+  transition: transform 700ms var(--ease);
+}
+
+.slide {
+  flex: 0 0 calc((100% - (var(--per) - 1) * var(--gap)) / var(--per));
+  min-width: 0;
+}
+
+.progresso {
+  height: 2px;
+  margin-inline: var(--margin);
+  background: rgb(255 255 255 / 0.16);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progresso span {
+  display: block;
+  height: 100%;
+  background: var(--paper);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.progresso .enchendo {
+  animation: encher 5000ms linear forwards;
+}
+
+@keyframes encher {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.rodape {
+  display: flex;
+  justify-content: center;
+  padding-inline: var(--margin);
+  margin-top: 8px;
+}
+
+@media (max-width: 1100px) {
+  .janela {
+    --per: 4;
+  }
+}
+
+@media (max-width: 800px) {
+  .janela {
+    --per: 2.3;
+  }
+}
+
+@media (max-width: 560px) {
+  .janela {
+    --per: 1.25;
+  }
+
+  .contador {
+    margin-right: auto;
+  }
+
+  .controles {
+    width: 100%;
+  }
+
+  .rodape :global(.btn) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progresso {
+    display: none;
+  }
+}

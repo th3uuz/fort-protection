@@ -59,27 +59,44 @@
   }
 }
 
+.carrossel {
+  border-color: transparent;
+}
+
+.carrossel .foto {
+  aspect-ratio: 4 / 3;
+}
+
+.carrossel .nome {
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.carrossel .texto {
+  font-size: 0.875rem;
+}
+
 @media (max-width: 560px) {
-  .card {
+  .grade {
     grid-template-columns: 116px minmax(0, 1fr);
     grid-template-rows: auto;
   }
 
-  .foto {
+  .grade .foto {
     aspect-ratio: auto;
     min-height: 100%;
   }
 
-  .corpo {
+  .grade .corpo {
     padding: 12px 14px;
     gap: 4px;
   }
 
-  .nome {
+  .grade .nome {
     font-size: 1.125rem;
   }
 
-  .texto {
+  .grade .texto {
     font-size: 0.875rem;
   }
 }

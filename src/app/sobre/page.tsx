@@ -82,7 +82,7 @@ export default function SobrePage() {
       </section>
 
       <section aria-labelledby="titulo-atendemos">
-        <SegmentIndex espacado idTitulo="titulo-atendemos" titulo="Área de atuação" texto={home.atendemos.texto} tom="ink">
+        <SegmentIndex idTitulo="titulo-atendemos" titulo="Área de atuação" texto={home.atendemos.texto}>
           <Link className={styles.link} href="/servicos">
             Ver os serviços
           </Link>

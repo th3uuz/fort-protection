@@ -112,68 +112,13 @@
 .servicos {
   background: var(--navy-2);
   color: var(--paper);
-  padding-block: clamp(28px, 3.4vw, 48px);
-  display: grid;
-  gap: clamp(16px, 2vw, 24px);
-}
-
-.servicosTopo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: end;
-  justify-content: space-between;
-  gap: 8px 32px;
-}
-
-.servicosTexto {
-  margin-top: 8px;
-  font-size: var(--step-0);
-  max-width: 60ch;
-}
-
-.servicos .linkTexto:hover {
-  color: var(--bg-3);
-}
-
-.cards {
-  --card-bg: var(--bg);
-  list-style: none;
-  padding-inline: var(--margin);
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--gap);
-}
-
-.cartaCta {
-  display: grid;
-  align-content: center;
-  gap: 12px;
-  justify-items: start;
-  padding: clamp(20px, 2.2vw, 32px);
-  background: var(--navy);
-  color: var(--paper);
-  border-radius: var(--radius);
-}
-
-.cartaCta p {
-  font-size: 0.9375rem;
-  line-height: 1.45;
-}
-
-.cartaCta :global(.btn) {
-  background: var(--paper);
-  color: var(--navy);
-}
-
-.cartaCta :global(.btn):hover {
-  background: var(--bg-3);
-  color: var(--navy);
+  padding-block: clamp(32px, 4vw, 64px);
 }
 
 .duplo {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(20px, 2.4vw, 32px);
+  gap: var(--gap);
   padding: clamp(32px, 4vw, 64px) var(--margin);
   background: var(--bg);
 }
@@ -182,7 +127,7 @@
   border-radius: var(--radius);
   overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  grid-template-rows: auto 1fr;
   background: var(--bg-2);
 }
 
@@ -192,7 +137,7 @@
 
 .painelFoto {
   position: relative;
-  min-height: 260px;
+  aspect-ratio: 16 / 9;
 }
 
 .painelFoto img {
@@ -201,48 +146,49 @@
 
 .painelTexto {
   display: grid;
-  align-content: center;
+  align-content: start;
   justify-items: start;
-  gap: 20px;
-  padding: clamp(24px, 3.4vw, 56px);
+  gap: 12px;
+  padding: clamp(20px, 2.4vw, 32px);
 }
 
 .painelTexto h2 {
-  font-size: clamp(1.5rem, 1rem + 1.4vw, 2.25rem);
+  font-size: clamp(1.5rem, 1rem + 1.2vw, 2rem);
 }
 
 .painelTexto p {
   font-size: var(--step-0);
-  line-height: 1.65;
-  max-width: 40ch;
-}
-
-.atendemos {
-  background: var(--bg);
+  line-height: 1.55;
+  max-width: 52ch;
 }
 
 .orcamento {
-  padding-block: clamp(28px, 3.4vw, 48px);
+  padding-block: clamp(32px, 4vw, 64px);
 }
 
 .orcamentoGrade {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  gap: var(--gap) clamp(16px, 2vw, 28px);
-  align-items: stretch;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: var(--gap) clamp(20px, 3vw, 40px);
+  align-items: start;
 }
 
 .orcamentoEsq {
   display: grid;
-  grid-template-rows: auto 1fr;
-  gap: clamp(12px, 1.6vw, 20px);
+  gap: clamp(12px, 1.4vw, 16px);
+}
+
+.orcamentoTexto {
+  font-size: var(--step-0);
+  line-height: 1.45;
 }
 
 .orcamentoFoto {
   border-radius: var(--radius);
   overflow: hidden;
   position: relative;
-  min-height: 220px;
+  aspect-ratio: 1 / 1;
+  margin-top: 8px;
 }
 
 .orcamentoFoto img {
@@ -254,16 +200,28 @@
   padding: clamp(20px, 2.6vw, 36px);
 }
 
-
 @media (max-width: 1100px) {
-  .cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .duplo {
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .painel {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    grid-template-rows: none;
+  }
+
+  .painelFoto {
+    aspect-ratio: auto;
+    min-height: 240px;
+  }
+
+  .painelTexto {
+    align-content: center;
+  }
+
+  .orcamentoGrade {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  }
 }
 
 @media (max-width: 800px) {
@@ -298,14 +256,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .painel {
-    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-  }
-
   .painelFoto {
     min-height: 200px;
   }
@@ -325,10 +275,6 @@
 }
 
 @media (max-width: 560px) {
-  .cards {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
   .painel {
     grid-template-columns: minmax(0, 1fr);
   }

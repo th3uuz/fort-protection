@@ -10,28 +10,26 @@ type Props = {
   texto: string;
   idTitulo: string;
   interativo?: boolean;
-  espacado?: boolean;
-  tom?: "gold" | "ink";
   children?: ReactNode;
 };
 
-export default function SegmentIndex({ titulo, texto, idTitulo, interativo = false, espacado = false, tom = "gold", children }: Props) {
+export default function SegmentIndex({ titulo, texto, idTitulo, interativo = false, children }: Props) {
   const escolher = (slug: string) => {
     window.dispatchEvent(new CustomEvent("segmento", { detail: slug }));
   };
 
   return (
-    <div className={`${styles.grade} ${espacado ? styles.espacado : ""}`}>
-      <div className={`${tom === "gold" ? "field-gold" : styles.introInk} ${styles.intro}`}>
+    <div className={styles.bloco}>
+      <div className={styles.intro}>
         <h2 id={idTitulo} data-reveal>
           {titulo}
         </h2>
-        <p data-reveal style={{ ["--d" as string]: 1 }}>
-          {texto}
-        </p>
-        {children}
+        <div className={styles.introTexto} data-reveal style={{ ["--d" as string]: 1 }}>
+          <p>{texto}</p>
+          {children}
+        </div>
       </div>
-      <ul className={styles.lista} role="list">
+      <ul className={styles.grade} role="list">
         {segmentos.map((s, i) => {
           const conteudo = (
             <>
@@ -40,7 +38,7 @@ export default function SegmentIndex({ titulo, texto, idTitulo, interativo = fal
                   src={`/images/${s.foto}`}
                   alt={s.alt}
                   fill
-                  sizes="(max-width: 800px) 50vw, 25vw"
+                  sizes={i === 0 ? "(max-width: 800px) 100vw, 280px" : "(max-width: 800px) 50vw, 280px"}
                   quality={70}
                 />
               </span>

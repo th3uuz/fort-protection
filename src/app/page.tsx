@@ -6,7 +6,7 @@ import Masthead from "@/components/Masthead";
 import { perguntasFrequentes, website } from "@/lib/schema";
 import ContactForm from "@/components/ContactForm";
 import SegmentIndex from "@/components/SegmentIndex";
-import ServiceCard from "@/components/ServiceCard";
+import ServicosCarrossel from "@/components/ServicosCarrossel";
 import CountUp from "@/components/CountUp";
 import Duvidas from "@/components/Duvidas";
 import { faq } from "@/lib/faq";
@@ -89,34 +89,13 @@ export default function Home() {
         </ul>
       </section>
 
-      <section className={`field-paper ${styles.servicos}`} aria-labelledby="titulo-servicos">
-        <div className={`wrap ${styles.servicosTopo}`}>
-          <div>
-            <h2 id="titulo-servicos" data-reveal>
-              {home.servicos.titulo}
-            </h2>
-            <p className={styles.servicosTexto} data-reveal style={{ ["--d" as string]: 1 }}>
-              {home.servicos.texto}
-            </p>
-          </div>
-          <Link className={styles.linkTexto} href="/servicos">
-            Ver todos os serviços
-          </Link>
-        </div>
-        <ul className={`wrap ${styles.cards}`} role="list">
-          {linhasServicos.map((s, i) => (
-            <li key={s.slug} data-reveal style={{ ["--d" as string]: i % 4 }}>
-              <ServiceCard servico={s} />
-            </li>
-          ))}
-          <li className={styles.cartaCta} data-reveal>
-            <h3>Peça seu orçamento</h3>
-            <p>Escolha onde você precisa do serviço e quais serviços quer. A mensagem sai pronta.</p>
-            <a className="btn" href="#orcamento">
-              Solicite um orçamento
-            </a>
-          </li>
-        </ul>
+      <section className={`field-gold ${styles.servicos}`} aria-labelledby="titulo-servicos">
+        <ServicosCarrossel
+          servicos={linhasServicos}
+          titulo={home.servicos.titulo}
+          texto={home.servicos.texto}
+          idTitulo="titulo-servicos"
+        />
       </section>
 
       <section className={styles.duplo} aria-label="Limpeza pós-obra e interinos">
@@ -126,7 +105,7 @@ export default function Home() {
               src="/images/limpeza.jpg"
               alt="Profissional de limpeza uniformizado passando mop no piso de um corredor envidraçado"
               fill
-              sizes="(max-width: 560px) 100vw, (max-width: 1100px) 40vw, 20vw"
+              sizes="(max-width: 560px) 100vw, (max-width: 1100px) 40vw, 560px"
               style={{ objectPosition: "50% 100%" }}
               quality={75}
             />
@@ -145,7 +124,7 @@ export default function Home() {
               src="/images/recepcao.jpg"
               alt="Atendente ao telefone em uma mesa de recepção"
               fill
-              sizes="(max-width: 560px) 100vw, (max-width: 1100px) 40vw, 20vw"
+              sizes="(max-width: 560px) 100vw, (max-width: 1100px) 40vw, 560px"
               quality={75}
             />
           </div>
@@ -159,7 +138,7 @@ export default function Home() {
         </article>
       </section>
 
-      <section className={styles.atendemos} aria-labelledby="titulo-atendemos">
+      <section aria-labelledby="titulo-atendemos">
         <SegmentIndex
           idTitulo="titulo-atendemos"
           titulo={home.atendemos.titulo}
@@ -174,12 +153,15 @@ export default function Home() {
             <h2 id="titulo-orcamento" data-reveal>
               Peça seu orçamento
             </h2>
-            <div className={styles.orcamentoFoto} data-reveal style={{ ["--d" as string]: 1 }}>
+            <p className={styles.orcamentoTexto} data-reveal style={{ ["--d" as string]: 1 }}>
+              Escolha onde você precisa do serviço e quais serviços quer. A mensagem sai pronta.
+            </p>
+            <div className={styles.orcamentoFoto} data-reveal style={{ ["--d" as string]: 2 }}>
               <Image
                 src="/images/cameras-celular.jpg"
                 alt="Câmera de segurança no teto e celular com as imagens de quatro ambientes"
                 fill
-                sizes="(max-width: 800px) 100vw, 38vw"
+                sizes="(max-width: 800px) 100vw, 380px"
                 quality={75}
               />
             </div>

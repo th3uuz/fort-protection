@@ -1,34 +1,45 @@
-.grade {
+.bloco {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.intro {
-  display: grid;
-  align-content: center;
-  gap: 12px;
-  padding: clamp(20px, 2.4vw, 36px) clamp(16px, 2vw, 28px) clamp(20px, 2.4vw, 36px) var(--margin);
-}
-
-.introInk {
+  gap: clamp(20px, 2.4vw, 32px);
+  padding: clamp(32px, 4vw, 64px) var(--margin);
   background: var(--bg-2);
   color: var(--ink);
 }
 
-.intro p {
-  font-size: var(--step-0);
-  line-height: 1.4;
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--gap) clamp(24px, 4vw, 64px);
+  align-items: center;
 }
 
-.lista {
-  display: contents;
+.introTexto {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+}
+
+.introTexto p {
+  font-size: var(--step-0);
+  line-height: 1.45;
+  max-width: none;
+}
+
+.grade {
   list-style: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: clamp(150px, 14vw, 200px);
+  gap: var(--gap);
+}
+
+.grade .item:first-child {
+  grid-row: span 2;
 }
 
 .item {
   position: relative;
-  aspect-ratio: 4 / 3;
   min-width: 0;
 }
 
@@ -86,19 +97,23 @@ a.link:focus-visible .foto img {
   padding: 0;
 }
 
+.livre .item {
+  aspect-ratio: 4 / 3;
+}
+
 @media (max-width: 800px) {
+  .intro {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .grade {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: clamp(130px, 32vw, 200px);
   }
 
-  .intro {
+  .grade .item:first-child {
+    grid-row: auto;
     grid-column: 1 / -1;
-    padding: 24px var(--margin);
-  }
-
-  .item:last-child {
-    grid-column: 1 / -1;
-    aspect-ratio: 8 / 3;
   }
 
   .nome {
@@ -111,20 +126,4 @@ a.link:focus-visible .foto img {
   .foto img {
     transition: none;
   }
-}
-
-.espacado {
-  gap: clamp(20px, 2.4vw, 32px);
-  padding: clamp(32px, 4vw, 64px) var(--margin);
-  background: var(--bg-2);
-}
-
-.espacado .intro {
-  gap: 20px;
-  background: var(--bg-3);
-  padding: clamp(24px, 3vw, 40px);
-}
-
-.espacado .intro p {
-  line-height: 1.65;
 }
