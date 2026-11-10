@@ -110,3 +110,52 @@
     color: var(--navy);
   }
 }
+
+@media (max-width: 800px) {
+  .banner {
+    gap: 0;
+    padding-block: 0;
+    background-color: #1f222e;
+    color: var(--paper);
+  }
+
+  .banner .texto {
+    justify-items: start;
+    text-align: left;
+    gap: 12px;
+    padding: 20px var(--margin) 28px;
+  }
+
+  .banner .h1 {
+    font-size: clamp(2.25rem, 9.5vw, 3rem);
+    line-height: 0.98;
+    margin-block: 0;
+  }
+
+  .banner .apoio {
+    margin-inline: 0;
+  }
+
+  .banner .texto nav,
+  .banner .texto nav span,
+  .banner .texto nav a {
+    color: rgb(255 255 255 / 0.85);
+  }
+
+  .banner .texto nav span[aria-current] {
+    color: #fff;
+  }
+
+  .banner .acoes {
+    display: flex;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .banner .acoes :global(.btn) {
+    width: 100%;
+    text-align: center;
+    background: var(--paper);
+    color: var(--navy);
+  }
+}

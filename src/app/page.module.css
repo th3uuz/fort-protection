@@ -43,11 +43,6 @@
   margin-top: 8px;
 }
 
-.heroFotos {
-  position: relative;
-  min-height: 260px;
-}
-
 .linkTexto {
   display: inline-block;
   font-weight: 600;
@@ -226,12 +221,8 @@
 @media (max-width: 800px) {
   .hero {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .heroFotos {
-    order: -1;
-    height: 200px;
-    min-height: 0;
+    background-color: #1f222e;
+    color: var(--paper);
   }
 
   .heroTexto {
@@ -308,19 +299,14 @@
     grid-row: 1;
   }
 
-  .heroFotos {
-    display: none;
-  }
 }
 
-@media (min-width: 801px) {
-  .heroAcoes :global(.btn) {
-    background: var(--paper);
-    color: var(--navy);
-  }
+.heroAcoes :global(.btn) {
+  background: var(--paper);
+  color: var(--navy);
+}
 
-  .heroAcoes :global(.btn):hover {
-    background: var(--bg-3);
-    color: var(--navy);
-  }
+.heroAcoes :global(.btn):hover {
+  background: var(--bg-3);
+  color: var(--navy);
 }

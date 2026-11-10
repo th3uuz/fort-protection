@@ -8,7 +8,7 @@ export const site = {
   hours: "Segunda a sexta, 08:00 às 18:00",
   city: "São Paulo",
   addressLine: "Rua, Jaracatia - São Paulo",
-  cnpj: "00.000.000/0000-00",
+  cnpj: "42.601.564/0001-20",
   instagram: "https://www.instagram.com/fortprotection_patrimonial",
   facebook: "https://www.facebook.com/share/TxXKeAqbFKnGRoTs/",
 } as const;

@@ -133,6 +133,12 @@ export default function Footer() {
       <p className={styles.legal}>
         © <CurrentYear /> {site.name}. Todos os direitos reservados. CNPJ{" "}
         {site.cnpj}.
+        <span className={styles.creditos}>
+          Desenvolvido por:{" "}
+          <a href="https://www.instagram.com/dev.lacerda/" target="_blank" rel="noopener noreferrer">
+            @dev.lacerda
+          </a>
+        </span>
       </p>
     </footer>
   );

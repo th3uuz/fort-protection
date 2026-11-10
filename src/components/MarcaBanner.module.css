@@ -1,0 +1,24 @@
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+  margin-bottom: 8px;
+}
+
+.marca img {
+  width: 56px;
+  height: 56px;
+  flex: none;
+}
+
+@media (min-width: 801px) {
+  .marca {
+    display: none;
+  }
+}

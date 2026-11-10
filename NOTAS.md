@@ -11,7 +11,7 @@
 
 ## Pendências do cliente
 - Endereço completo (hoje: "Rua, Jaracatia - São Paulo"). JSON-LD sem endereço até confirmar.
-- CNPJ: placeholder `00.000.000/0000-00` em `src/lib/site.ts`.
+- CNPJ real (42.601.564/0001-20) em `src/lib/site.ts`; rodapé também traz o crédito "Desenvolvido por: @dev.lacerda" com link para o Instagram.
 - Provedor de e-mail do formulário: EmailJS ou Resend (decisão do usuário).
 - Textos provisórios para validação: FAQ e serviços sem base em `info.md` (Mensageiro/Recepcionista, Zeladoria, Manutenção, Jardinagem, Controlador de acesso, Manobrista).
 - Depoimentos: atribuição nome/texto ambígua no site antigo, mantida como está por decisão do usuário.

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Headline from "@/components/Headline";
 import JsonLd from "@/components/JsonLd";
-import Masthead from "@/components/Masthead";
+import MarcaBanner from "@/components/MarcaBanner";
 import { perguntasFrequentes, website } from "@/lib/schema";
 import ContactForm from "@/components/ContactForm";
 import SegmentIndex from "@/components/SegmentIndex";
@@ -16,13 +16,6 @@ import { servicoPorSlug } from "@/lib/servicos";
 import styles from "./page.module.css";
 
 export const metadata = pageMetadata("/");
-
-const fotosMosaico = [
-  { src: "/images/galpoes-topo.jpg", alt: "Estrutura metálica e luminárias no teto de um galpão" },
-  { src: "/images/condominios-topo.jpg", alt: "Torres espelhadas de condomínio vistas de baixo" },
-  { src: "/images/cameras-cidade.jpg", alt: "Câmera de segurança voltada para a cidade iluminada à noite" },
-  { src: "/images/industrias-topo.jpg", alt: "Chaminé iluminada de uma indústria à noite" },
-];
 
 const ordemServicos = [
   "portaria-24-horas",
@@ -49,6 +42,7 @@ export default function Home() {
 
       <section className={styles.hero}>
         <div className={styles.heroTexto}>
+          <MarcaBanner />
           <Headline className={styles.h1} linhas={["Segurança patrimonial", "em São Paulo"]} />
           <div className={`${styles.apoio} fade-after`}>
             <p className={styles.slogan}>{home.slogan}</p>
@@ -62,9 +56,6 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </div>
-        <div className={styles.heroFotos}>
-          <Masthead fotos={fotosMosaico} />
         </div>
       </section>
 
