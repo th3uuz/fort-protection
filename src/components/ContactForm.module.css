@@ -30,7 +30,7 @@
   width: 100%;
   font: inherit;
   color: var(--ink);
-  background: var(--paper-2);
+  background: var(--bg-3);
   border: 2px solid transparent;
   padding: 12px 14px;
   min-height: 48px;
@@ -80,7 +80,7 @@
 .campo input:hover,
 .campo textarea:hover,
 .campo select:hover {
-  background: #dadad3;
+  background: #d6dfec;
 }
 
 .campo input[aria-invalid="true"],
@@ -98,7 +98,7 @@
   text-align: left;
   font: inherit;
   color: var(--ink);
-  background: var(--paper-2);
+  background: var(--bg-3);
   border: 2px solid transparent;
   padding: 12px 44px 12px 14px;
   min-height: 48px;
@@ -107,7 +107,7 @@
 }
 
 .multiBotao:hover {
-  background: #dadad3;
+  background: #d6dfec;
 }
 
 .multiBotao:focus-visible {
@@ -177,7 +177,7 @@
 }
 
 .campo .multiOpcao input:checked {
-  background: var(--ink);
+  background: var(--navy);
 }
 
 .campo .multiOpcao input:checked::after {
@@ -217,7 +217,7 @@
 .status {
   display: grid;
   gap: 12px;
-  background: var(--ink);
+  background: var(--navy);
   color: var(--paper);
   padding: 24px;
 }
@@ -237,12 +237,12 @@
 }
 
 .status .alternativas :global(.btn) {
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--paper);
+  color: var(--navy);
 }
 
 .status .alternativas :global(.btn):hover {
-  background: var(--paper);
+  background: var(--bg-3);
 }
 
 .linkEmail {

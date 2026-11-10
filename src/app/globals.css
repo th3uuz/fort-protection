@@ -2,12 +2,17 @@
   --ink: #0b0d10;
   --ink-2: #14181d;
   --ink-3: #1b2027;
-  --paper: #f1f1ee;
-  --paper-2: #e4e4de;
-  --gold: #c9a24b;
-  --gold-deep: #9c7a2c;
-  --muted: #b9b4a6;
-  --muted-paper: #5c574c;
+  --paper: #ffffff;
+  --paper-2: #e6ecf5;
+  --bg: #ffffff;
+  --bg-2: #f4f7fb;
+  --bg-3: #e6ecf5;
+  --navy: #0f2a52;
+  --navy-2: #0a1f3f;
+  --gold: #0f2a52;
+  --gold-deep: #0a1f3f;
+  --muted: #475467;
+  --muted-paper: #475467;
   --margin: clamp(16px, 2.2vw, 32px);
   --axis: 42%;
   --gap-section: clamp(32px, 4vw, 56px);
@@ -33,15 +38,15 @@
 }
 
 html {
-  color-scheme: dark;
+  color-scheme: light;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
   min-height: 100svh;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--bg);
+  color: var(--ink);
   font-family: var(--font-text);
   font-size: var(--step-0);
   line-height: 1.55;
@@ -103,16 +108,16 @@ summary {
 }
 
 ::selection {
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--navy);
+  color: var(--paper);
 }
 
 .skip {
   position: absolute;
   left: var(--margin);
   top: -80px;
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--navy);
+  color: var(--paper);
   padding: 12px 20px;
   font-weight: 600;
   z-index: 100;
@@ -133,13 +138,13 @@ summary {
 }
 
 .field-paper {
-  background: var(--paper);
+  background: var(--bg-2);
   color: var(--ink);
 }
 
 .field-gold {
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--navy);
+  color: var(--paper);
 }
 
 .section {
@@ -148,8 +153,8 @@ summary {
 
 .btn {
   display: inline-block;
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--navy);
+  color: var(--paper);
   padding: 14px 26px;
   font-weight: 600;
   text-decoration: none;
@@ -161,31 +166,29 @@ summary {
 }
 
 .btn:hover {
-  background: var(--paper);
+  background: var(--navy-2);
 }
 
 .btn:active {
   transform: translateY(1px);
 }
 
-.field-paper .btn,
 .field-gold .btn {
-  background: var(--ink);
-  color: var(--paper);
-}
-
-.field-paper .btn:hover {
-  background: var(--ink-3);
+  background: var(--paper);
+  color: var(--navy);
 }
 
 .field-gold .btn:hover {
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--bg-3);
+  color: var(--navy);
 }
 
-.field-paper :focus-visible,
+.field-paper :focus-visible {
+  outline-color: var(--navy);
+}
+
 .field-gold :focus-visible {
-  outline-color: var(--ink);
+  outline-color: var(--paper);
 }
 
 .mask {

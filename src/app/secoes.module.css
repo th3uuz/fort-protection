@@ -3,7 +3,7 @@
 }
 
 .ink2 {
-  background: var(--ink-2);
+  background: var(--bg-2);
 }
 
 .topo {
@@ -55,7 +55,7 @@
 }
 
 .ink2 .cards {
-  --card-bg: var(--ink-3);
+  --card-bg: var(--bg);
 }
 
 .cartaCta {
@@ -64,8 +64,8 @@
   justify-items: start;
   gap: 12px;
   padding: clamp(20px, 2.2vw, 32px);
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--navy);
+  color: var(--paper);
 }
 
 .cartaCta p {
@@ -74,13 +74,13 @@
 }
 
 .cartaCta :global(.btn) {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--navy);
 }
 
 .cartaCta :global(.btn):hover {
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--bg-3);
+  color: var(--navy);
 }
 
 .texto {
@@ -157,8 +157,8 @@
   justify-items: start;
   gap: 14px;
   padding: clamp(20px, 2.6vw, 36px);
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--navy);
+  color: var(--paper);
   min-height: 100%;
 }
 
@@ -262,7 +262,7 @@
 }
 
 .mvvItem + .mvvItem {
-  border-left: 2px solid rgb(11 13 16 / 0.22);
+  border-left: 2px solid rgb(255 255 255 / 0.3);
 }
 
 .icone {
@@ -270,8 +270,8 @@
   place-items: center;
   width: 72px;
   height: 72px;
-  background: var(--ink);
-  color: var(--gold);
+  background: var(--paper);
+  color: var(--navy);
 }
 
 .icone svg {
@@ -393,7 +393,7 @@
 
   .mvvItem + .mvvItem {
     border-left: 0;
-    border-top: 2px solid rgb(11 13 16 / 0.22);
+    border-top: 2px solid rgb(255 255 255 / 0.3);
     padding-top: 24px;
   }
 }

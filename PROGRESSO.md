@@ -52,3 +52,6 @@
 - Horário e endereço mantidos só no rodapé e em /contato; removidos de FAQ, Sobre e páginas de serviço. Seção "Localização Segura" e "Atende N tipos de local" removidas da Sobre.
 - Espaçamento maior na seção Limpeza Pós-Obra e Interinos (home) e no bloco "Quem nós atendemos?" da Sobre (variante `espacado`, fundo distinto do rodapé).
 - Indicadores da home trocados por +5 anos, +100 clientes, 11 serviços e 7 tipos de locais (dados informados pelo usuário); info.md atualizado.
+
+## Melhoria 16: tema claro (pedido do cliente)
+- Paleta so branco, preto e azul-escuro (#0f2a52 / #0a1f3f); dourado removido. Fundos claros (#fff, #f4f7fb, #e6ecf5), texto preto, azul-escuro em botoes, destaques, indicadores, orcamento, Missao/Visao/Valores e rodape. Hero com banner sob veu azul. Tokens em globals.css (--bg, --bg-2, --bg-3, --navy).

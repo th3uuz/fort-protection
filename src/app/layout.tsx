@@ -22,8 +22,8 @@ const text = Hanken_Grotesk({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0b0d10",
-  colorScheme: "dark",
+  themeColor: "#ffffff",
+  colorScheme: "light",
 };
 
 export const metadata: Metadata = {

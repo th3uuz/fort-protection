@@ -89,7 +89,7 @@
 }
 
 .figuras li {
-  border-top: 2px solid var(--ink);
+  border-top: 2px solid var(--paper);
   padding-top: 12px;
 }
 
@@ -132,7 +132,7 @@
 }
 
 .cards {
-  --card-bg: var(--ink);
+  --card-bg: var(--bg);
   list-style: none;
   padding-inline: var(--margin);
   display: grid;
@@ -146,8 +146,8 @@
   gap: 12px;
   justify-items: start;
   padding: clamp(20px, 2.2vw, 32px);
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--navy);
+  color: var(--paper);
 }
 
 .cartaCta p {
@@ -156,13 +156,13 @@
 }
 
 .cartaCta :global(.btn) {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--navy);
 }
 
 .cartaCta :global(.btn):hover {
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--bg-3);
+  color: var(--navy);
 }
 
 .duplo {
@@ -170,17 +170,17 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(20px, 2.4vw, 32px);
   padding: clamp(32px, 4vw, 64px) var(--margin);
-  background: var(--ink);
+  background: var(--bg);
 }
 
 .painel {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-  background: var(--ink-2);
+  background: var(--bg-2);
 }
 
 .painelAlt {
-  background: var(--ink-3);
+  background: var(--bg-3);
 }
 
 .painelFoto {
@@ -211,11 +211,11 @@
 }
 
 .atendemos {
-  background: var(--ink);
+  background: var(--bg);
 }
 
 .depoimentos {
-  background: var(--ink-2);
+  background: var(--bg-2);
   padding-block: clamp(28px, 3.4vw, 48px);
 }
 
@@ -244,8 +244,8 @@
 .fotoAutor {
   display: grid;
   place-items: center;
-  background: var(--ink);
-  color: var(--gold);
+  background: var(--navy);
+  color: var(--paper);
   font-family: var(--font-display);
   font-size: 1.75rem;
   font-weight: 600;
@@ -403,9 +403,9 @@
 }
 
 .faq {
-  --duvida-bg: var(--ink);
-  --duvida-hover: var(--ink-3);
-  background: var(--ink-2);
+  --duvida-bg: var(--bg);
+  --duvida-hover: var(--bg-3);
+  background: var(--bg-2);
   padding-block: clamp(28px, 3.4vw, 48px);
 }
 
@@ -422,8 +422,8 @@
 @media (min-width: 801px) {
   .hero {
     grid-template-columns: var(--axis) minmax(0, 1fr);
-    background-color: var(--ink);
-    background-image: url("/images/banner-home.jpg");
+    background-color: var(--navy-2);
+    background-image: linear-gradient(rgb(8 22 48 / 0.58), rgb(8 22 48 / 0.58)), url("/images/banner-home.jpg");
     background-size: cover;
     background-position: center 55%;
     background-repeat: no-repeat;

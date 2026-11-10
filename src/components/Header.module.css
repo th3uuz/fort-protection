@@ -7,8 +7,8 @@
   gap: clamp(16px, 2.4vw, 40px);
   min-height: var(--h);
   padding-inline: var(--margin);
-  background: var(--ink);
-  border-bottom: 1px solid rgb(241 241 238 / 0.1);
+  background: var(--bg);
+  border-bottom: 1px solid rgb(11 13 16 / 0.12);
 }
 
 .brand {
@@ -121,8 +121,8 @@
   width: max-content;
   min-width: 460px;
   padding: 20px 24px 8px;
-  background: var(--ink-2);
-  border: 1px solid rgb(241 241 238 / 0.1);
+  background: var(--bg);
+  border: 1px solid rgb(11 13 16 / 0.12);
   border-top: 3px solid var(--gold);
   opacity: 0;
   visibility: hidden;
@@ -173,7 +173,7 @@
   display: block;
   margin-top: 8px;
   padding-block: 14px;
-  border-top: 1px solid rgb(241 241 238 / 0.1);
+  border-top: 1px solid rgb(11 13 16 / 0.12);
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s var(--ease);
@@ -225,7 +225,7 @@
     place-items: center;
     width: 48px;
     height: 48px;
-    color: var(--paper);
+    color: var(--ink);
     transition: color 0.2s var(--ease);
   }
 
@@ -257,7 +257,7 @@
     top: 100%;
     max-height: calc(100svh - var(--h));
     overflow-y: auto;
-    background: var(--ink-2);
+    background: var(--bg);
     border-bottom: 3px solid var(--gold);
     padding: 4px var(--margin) 20px;
     display: grid;
@@ -269,7 +269,7 @@
     align-items: center;
     justify-content: space-between;
     min-height: 56px;
-    border-bottom: 1px solid rgb(241 241 238 / 0.1);
+    border-bottom: 1px solid rgb(11 13 16 / 0.12);
     text-decoration: none;
     font-family: var(--font-display);
     font-weight: 600;
@@ -299,7 +299,7 @@
     display: grid;
     gap: 12px;
     padding: 12px 0 8px 12px;
-    border-bottom: 1px solid rgb(241 241 238 / 0.1);
+    border-bottom: 1px solid rgb(11 13 16 / 0.12);
   }
 
   .acordeaoCorpo ul {

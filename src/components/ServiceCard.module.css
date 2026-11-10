@@ -2,8 +2,9 @@
   display: grid;
   grid-template-rows: auto 1fr;
   height: 100%;
-  background: var(--card-bg, var(--ink-2));
-  color: var(--paper);
+  background: var(--card-bg, var(--bg-2));
+  color: var(--ink);
+  border: 1px solid rgb(11 13 16 / 0.12);
   text-decoration: none;
 }
 

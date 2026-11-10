@@ -4,7 +4,7 @@
 }
 
 .item {
-  background: var(--duvida-bg, var(--ink-2));
+  background: var(--duvida-bg, var(--bg-2));
 }
 
 .pergunta {
@@ -41,7 +41,7 @@
 }
 
 .pergunta:hover {
-  background: var(--duvida-hover, var(--ink-3));
+  background: var(--duvida-hover, var(--bg-3));
 }
 
 .resposta {
@@ -67,5 +67,5 @@
 }
 
 .links a:hover {
-  color: var(--paper);
+  color: var(--navy-2);
 }

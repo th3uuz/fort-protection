@@ -11,8 +11,8 @@
 }
 
 .introInk {
-  background: var(--ink-2);
-  color: var(--paper);
+  background: var(--bg-2);
+  color: var(--ink);
 }
 
 .intro p {
@@ -56,7 +56,7 @@
   right: 0;
   bottom: 0;
   padding: 10px 16px;
-  background: var(--ink);
+  background: var(--navy);
   color: var(--paper);
   font-family: var(--font-display);
   font-weight: 600;
@@ -68,8 +68,8 @@
 
 a.link:hover .nome,
 a.link:focus-visible .nome {
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--paper);
+  color: var(--navy);
 }
 
 a.link:hover .foto img,
@@ -115,12 +115,12 @@ a.link:focus-visible .foto img {
 .espacado {
   gap: clamp(20px, 2.4vw, 32px);
   padding: clamp(32px, 4vw, 64px) var(--margin);
-  background: var(--ink-2);
+  background: var(--bg-2);
 }
 
 .espacado .intro {
   gap: 20px;
-  background: var(--ink-3);
+  background: var(--bg-3);
   padding: clamp(24px, 3vw, 40px);
 }
 
