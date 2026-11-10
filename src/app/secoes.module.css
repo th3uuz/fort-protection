@@ -216,6 +216,7 @@
 
 .quemFoto img {
   object-fit: cover;
+  object-position: 50% 33%;
 }
 
 .quemTexto {
@@ -407,6 +408,10 @@
   .quemFoto {
     min-height: 0;
     aspect-ratio: 16 / 9;
+  }
+
+  .quemFoto img {
+    object-position: 50% 20%;
   }
 
   .localSobre {

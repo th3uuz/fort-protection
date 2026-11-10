@@ -44,8 +44,8 @@ export default function SobrePage() {
         <div className={`wrap ${styles.quem}`}>
           <div className={styles.quemFoto}>
             <Image
-              src="/images/condominios-topo.jpg"
-              alt="Torres espelhadas de condomínio vistas de baixo"
+              src="/images/ceo.jpg"
+              alt="CEO da Fort Protection Patrimonial sentado diante do letreiro da empresa"
               fill
               sizes="(max-width: 800px) 100vw, 40vw"
               quality={75}

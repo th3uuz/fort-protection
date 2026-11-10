@@ -94,6 +94,11 @@ for (const [origem, destino] of servicos) {
     .toFile(out(destino + ".jpg"));
 }
 
+await sharp(src("ceo.jpeg"))
+  .resize({ width: 1000, withoutEnlargement: true })
+  .jpeg(jpeg)
+  .toFile(out("ceo.jpg"));
+
 await sharp(src("logo-fort-protection.png"))
   .resize(512, 512)
   .png()

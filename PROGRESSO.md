@@ -94,3 +94,4 @@
 - Melhoria 30: foto das páginas de serviço com véu escuro leve e logo no canto inferior direito; "Como funciona" com título no topo e texto abaixo, centralizados.
 - Melhoria 31: pilares das páginas de serviço com título menor e padding lateral reduzido; "Competência" não vaza mais da coluna e os 3 blocos ficam centralizados (centros medidos em 1440, 1100 e 800 px).
 - Melhoria 32: carrossel de serviços e painéis Pós Obra & Eventos e Interinos da home com véu escuro leve e logo no canto inferior direito.
+- Melhoria 33: Sobre Nós, bloco "Quem somos nós" usa imagens/ceo.jpeg (public/images/ceo.jpg, 1000 px) no lugar da foto do prédio; recorte 50% 33% no desktop e 50% 20% no celular para manter rosto e letreiro.
