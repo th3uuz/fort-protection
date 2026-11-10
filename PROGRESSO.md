@@ -91,3 +91,4 @@
 - Melhoria 27: banner mobile próprio (fundo #1F222E, logo e nome, breadcrumb, H1, apoio e botão; sem mosaico) na home, serviços, sobre e contato. Rodapé com CNPJ real 42.601.564/0001-20 e crédito "Desenvolvido por: @dev.lacerda" (link do Instagram).
 - Melhoria 28: faixa de logo e nome removida do banner mobile (duplicava o cabeçalho); MarcaBanner excluído.
 - Melhoria 29: --navy-2 passou a #1f222e; banners mobile usam a variável.
+- Melhoria 30: foto das páginas de serviço com véu escuro leve e logo no canto inferior direito; "Como funciona" com título no topo e texto abaixo, centralizados.

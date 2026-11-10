@@ -84,6 +84,13 @@ export default async function ServicoPage({ params }: Props) {
               loading="eager"
               quality={75}
             />
+            <Image
+              src="/images/logo-fort-protection.png"
+              alt=""
+              width={72}
+              height={72}
+              className={styles.incluiLogo}
+            />
           </div>
           <div className={styles.incluiTexto}>
             <p className={styles.intro}>{servico.intro}</p>
