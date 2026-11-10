@@ -2,7 +2,7 @@
 
 ## Stack
 - Next.js (App Router, TypeScript). Regra do usuário: sites sempre em Next.js.
-- Fontes via `next/font`: Newsreader (títulos) e Hanken Grotesk (texto).
+- Fontes via `next/font`: Plus Jakarta Sans (títulos) e Hanken Grotesk (texto).
 - Publicação na Vercel feita pelo usuário. Sem remoto git.
 
 ## Dados da empresa

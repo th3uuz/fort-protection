@@ -24,7 +24,7 @@
   --step-1: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem);
   --step-2: clamp(1.75rem, 1.2rem + 2vw, 3rem);
   --step-3: clamp(2.25rem, 1.2rem + 4.4vw, 5rem);
-  --font-display: var(--font-newsreader), Georgia, serif;
+  --font-display: var(--font-jakarta), "Segoe UI", system-ui, sans-serif;
   --font-text: var(--font-hanken), "Segoe UI", system-ui, sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
