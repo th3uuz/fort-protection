@@ -98,6 +98,13 @@ export default function Home() {
               style={{ objectPosition: "50% 65%" }}
               quality={75}
             />
+            <Image
+              src="/images/logo-fort-protection.png"
+              alt=""
+              width={72}
+              height={72}
+              className={styles.painelLogo}
+            />
           </div>
           <div className={styles.painelTexto}>
             <h2>{home.posObra.titulo}</h2>
@@ -116,6 +123,13 @@ export default function Home() {
               fill
               sizes="(max-width: 560px) 100vw, (max-width: 1100px) 40vw, 560px"
               quality={75}
+            />
+            <Image
+              src="/images/logo-fort-protection.png"
+              alt=""
+              width={72}
+              height={72}
+              className={styles.painelLogo}
             />
           </div>
           <div className={styles.painelTexto}>

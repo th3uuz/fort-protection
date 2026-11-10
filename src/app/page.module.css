@@ -139,6 +139,24 @@
   object-fit: cover;
 }
 
+.painelFoto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgb(31 34 46 / 0.28), rgb(31 34 46 / 0.28)),
+    linear-gradient(to top left, rgb(31 34 46 / 0.55), transparent 55%);
+  pointer-events: none;
+}
+
+.painelFoto .painelLogo {
+  position: absolute;
+  inset: auto 14px 14px auto;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  z-index: 1;
+}
+
 .painelTexto {
   display: grid;
   align-content: start;

@@ -16,6 +16,30 @@
   overflow: hidden;
 }
 
+.carrossel .foto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgb(31 34 46 / 0.28), rgb(31 34 46 / 0.28)),
+    linear-gradient(to top left, rgb(31 34 46 / 0.55), transparent 55%);
+  pointer-events: none;
+}
+
+.card:hover .foto .logo,
+.card:focus-visible .foto .logo {
+  transform: none;
+}
+
+.foto .logo {
+  position: absolute;
+  inset: auto 12px 12px auto;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  z-index: 1;
+  transform: none;
+}
+
 .foto img {
   object-fit: cover;
   transition: transform 0.5s var(--ease);

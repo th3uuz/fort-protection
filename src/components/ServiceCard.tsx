@@ -26,6 +26,16 @@ export default function ServiceCard({ servico, variante = "grade", sizes, qualit
             style={foto.posicao ? { objectPosition: foto.posicao } : undefined}
             quality={quality}
           />
+          {variante === "carrossel" ? (
+            <Image
+              src="/images/logo-fort-protection.png"
+              alt=""
+              width={64}
+              height={64}
+              draggable={false}
+              className={styles.logo}
+            />
+          ) : null}
         </span>
       ) : null}
       <span className={styles.corpo}>
