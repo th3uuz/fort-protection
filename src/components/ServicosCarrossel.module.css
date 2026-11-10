@@ -59,7 +59,7 @@
 }
 
 .janela {
-  --per: 5;
+  --per: 3;
   margin-inline: var(--margin);
   overflow: clip;
   overflow-clip-margin: 6px;
@@ -99,7 +99,7 @@
 }
 
 .progresso .enchendo {
-  animation: encher 5000ms linear forwards;
+  animation: encher 3000ms linear forwards;
 }
 
 @keyframes encher {
@@ -113,12 +113,6 @@
   justify-content: center;
   padding-inline: var(--margin);
   margin-top: 8px;
-}
-
-@media (max-width: 1100px) {
-  .janela {
-    --per: 4;
-  }
 }
 
 @media (max-width: 800px) {

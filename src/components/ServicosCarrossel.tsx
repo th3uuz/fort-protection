@@ -7,7 +7,7 @@ import type { Servico } from "@/lib/servicos";
 import styles from "./ServicosCarrossel.module.css";
 
 const CLONES = 5;
-const INTERVALO = 5000;
+const INTERVALO = 3000;
 
 type Props = {
   servicos: Servico[];
@@ -226,7 +226,7 @@ export default function ServicosCarrossel({ servicos, titulo, texto, idTitulo }:
                 <ServiceCard
                   servico={s}
                   variante="carrossel"
-                  sizes="(max-width: 560px) 80vw, (max-width: 800px) 45vw, (max-width: 1100px) 25vw, 230px"
+                  sizes="(max-width: 560px) 80vw, (max-width: 800px) 45vw, (max-width: 1100px) 33vw, 360px"
                 />
               </div>
             );

@@ -67,3 +67,9 @@
 - Home: Área de atuação dentro do container (título e texto em cima, mosaico com Condomínios em destaque); painéis Pós-obra/Interinos com foto em cima; orçamento com formulário mais largo (4fr/8fr) e foto quadrada.
 - Contato: formulário primeiro; Fale Conosco e Localização abaixo, em duas colunas.
 - Marca: logo (500px original) e nome no bloco escuro do mosaico do topo de Sobre, Serviços, páginas de serviço e Contato.
+
+## Melhoria 21: carrossel, orçamento e FAQ
+- Carrossel de serviços: 3 cards por vez no desktop (2,3 até 800 px e 1,25 até 560 px), cards com fundo branco, autoplay de 3 s.
+- Orçamento da home: título e subtítulo acima da foto e do formulário; foto acompanha a altura do formulário; botão de envio com fundo --navy.
+- FAQ (home e páginas de serviço): perguntas de 26 para 22 px e respostas de 19 para 17 px no desktop.
+- Conferido em 1440, 768 e 375: 0 erros de console, 0 overflow.

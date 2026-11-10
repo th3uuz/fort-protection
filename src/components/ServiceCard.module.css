@@ -61,6 +61,7 @@
 
 .carrossel {
   border-color: transparent;
+  background: var(--paper);
 }
 
 .carrossel .foto {

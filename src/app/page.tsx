@@ -148,23 +148,23 @@ export default function Home() {
       </section>
 
       <section id="orcamento" className={`field-gold ${styles.orcamento}`} aria-labelledby="titulo-orcamento">
+        <div className={`wrap ${styles.orcamentoTopo}`}>
+          <h2 id="titulo-orcamento" data-reveal>
+            Peça seu orçamento
+          </h2>
+          <p className={styles.orcamentoTexto} data-reveal style={{ ["--d" as string]: 1 }}>
+            Escolha onde você precisa do serviço e quais serviços quer. A mensagem sai pronta.
+          </p>
+        </div>
         <div className={`wrap ${styles.orcamentoGrade}`}>
-          <div className={styles.orcamentoEsq}>
-            <h2 id="titulo-orcamento" data-reveal>
-              Peça seu orçamento
-            </h2>
-            <p className={styles.orcamentoTexto} data-reveal style={{ ["--d" as string]: 1 }}>
-              Escolha onde você precisa do serviço e quais serviços quer. A mensagem sai pronta.
-            </p>
-            <div className={styles.orcamentoFoto} data-reveal style={{ ["--d" as string]: 2 }}>
-              <Image
-                src="/images/cameras-celular.jpg"
-                alt="Câmera de segurança no teto e celular com as imagens de quatro ambientes"
-                fill
-                sizes="(max-width: 800px) 100vw, 380px"
-                quality={75}
-              />
-            </div>
+          <div className={styles.orcamentoFoto} data-reveal style={{ ["--d" as string]: 2 }}>
+            <Image
+              src="/images/cameras-celular.jpg"
+              alt="Câmera de segurança no teto e celular com as imagens de quatro ambientes"
+              fill
+              sizes="(max-width: 800px) 100vw, 800px"
+              quality={75}
+            />
           </div>
           <div className={`field-paper ${styles.orcamentoCaixa}`} data-reveal style={{ ["--d" as string]: 1 }}>
             <ContactForm />
