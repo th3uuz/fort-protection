@@ -8,7 +8,7 @@
 
 .cols {
   width: 100%;
-  max-width: 1320px;
+  max-width: none;
   margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

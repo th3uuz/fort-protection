@@ -68,7 +68,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`field-gold ${styles.eficaz}`} aria-labelledby="titulo-eficaz">
+      <section className={styles.eficaz} aria-labelledby="titulo-eficaz">
         <div className={`wrap ${styles.eficazTopo}`}>
           <h2 id="titulo-eficaz" data-reveal>
             {home.eficaz.titulo}

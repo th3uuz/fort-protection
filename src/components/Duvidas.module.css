@@ -4,6 +4,8 @@
 }
 
 .item {
+  border-radius: var(--radius);
+  overflow: hidden;
   background: var(--duvida-bg, var(--bg-2));
 }
 

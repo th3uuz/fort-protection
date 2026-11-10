@@ -38,6 +38,7 @@
   display: block;
   text-decoration: none;
   overflow: hidden;
+  border-radius: var(--radius);
 }
 
 .foto {

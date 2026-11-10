@@ -32,8 +32,6 @@ export const home = {
 export const indicadores = [
   { valor: "+5", rotulo: "Anos atuando no mercado" },
   { valor: "+100", rotulo: "Clientes atendidos" },
-  { valor: "11", rotulo: "Serviços de segurança e facilities" },
-  { valor: "7", rotulo: "Tipos de locais na área de atuação" },
 ] as const;
 
 export const depoimentos = {

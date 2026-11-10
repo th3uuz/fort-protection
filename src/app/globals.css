@@ -13,7 +13,10 @@
   --gold-deep: #07040a;
   --muted: #475467;
   --muted-paper: #475467;
-  --margin: clamp(16px, 2.2vw, 32px);
+  --margin-base: clamp(16px, 2.2vw, 32px);
+  --margin: max(var(--margin-base), calc((100vw - 1120px) / 2));
+  --radius: 8px;
+  --blue: #1f4e9c;
   --axis: 42%;
   --gap-section: clamp(32px, 4vw, 56px);
   --gap: clamp(12px, 1.4vw, 20px);
@@ -160,6 +163,7 @@ summary {
   text-decoration: none;
   border: 0;
   cursor: pointer;
+  border-radius: var(--radius);
   font: inherit;
   font-weight: 600;
   transition: background-color 0.2s var(--ease), transform 0.2s var(--ease);
