@@ -60,3 +60,10 @@
 
 ## Melhoria 19: container, home e arredondamento
 - Container limitado a 1120px (var --margin calculada); indicadores sem "11 servicos" e "7 locais"; bloco de indicadores branco; bloco de servicos azul (--blue #1f4e9c) com cards brancos; --radius 8px em botoes, cards, paineis, FAQ e campos.
+
+## Melhoria 20: fonte, carrossel, seções e marca
+- Títulos em Plus Jakarta Sans (no lugar de Newsreader).
+- Home: serviços em carrossel (5 por vez no desktop, 4/2,3/1,25 em telas menores), loop infinito, autoplay de 5s com pausa por botão, hover e foco; parado com prefers-reduced-motion; botão "Ver todos os serviços" abaixo. Card de CTA removido.
+- Home: Área de atuação dentro do container (título e texto em cima, mosaico com Condomínios em destaque); painéis Pós-obra/Interinos com foto em cima; orçamento com formulário mais largo (4fr/8fr) e foto quadrada.
+- Contato: formulário primeiro; Fale Conosco e Localização abaixo, em duas colunas.
+- Marca: logo (500px original) e nome no bloco escuro do mosaico do topo de Sobre, Serviços, páginas de serviço e Contato.

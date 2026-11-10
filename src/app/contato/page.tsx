@@ -29,8 +29,17 @@ export default function ContatoPage() {
         fotos={mosaicos.contato}
       />
 
-      <section className={styles.zonas}>
-        <div className={styles.esq}>
+      <section id="orcamento" className={`field-paper ${styles.formulario}`} aria-labelledby="titulo-orcamento">
+        <div className={`wrap ${styles.formularioGrade}`}>
+          <h2 id="titulo-orcamento" data-reveal>
+            Peça seu orçamento
+          </h2>
+          <ContactForm />
+        </div>
+      </section>
+
+      <section className={styles.zonas} aria-label="Contato e localização">
+        <div className={`wrap ${styles.info}`}>
           <div className={styles.bloco} data-reveal>
             <h2>{contato.faleConosco}</h2>
             <dl className={styles.pares}>
@@ -62,10 +71,6 @@ export default function ContatoPage() {
               </div>
             </dl>
           </div>
-        </div>
-        <div className={`field-paper ${styles.dir}`} id="orcamento">
-          <h2 data-reveal>Peça seu orçamento</h2>
-          <ContactForm />
         </div>
       </section>
     </>

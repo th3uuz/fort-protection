@@ -31,7 +31,23 @@ export default function Masthead({ fotos }: Props) {
           ["--i" as string]: i,
         };
         if (tile.tipo === "cor") {
-          return <div key={i} className={`${styles.tile} ${styles.gold}`} style={estilo} aria-hidden="true" />;
+          return (
+            <div key={i} className={`${styles.tile} ${styles.gold} ${styles.marca}`} style={estilo} aria-hidden="true">
+              <Image
+                src="/images/logo-fort-protection.png"
+                alt=""
+                width={500}
+                height={500}
+                sizes="(max-width: 800px) 72px, 128px"
+                className={styles.logo}
+                quality={80}
+              />
+              <span className={styles.nomeMarca}>
+                Fort Protection
+                <span>Patrimonial</span>
+              </span>
+            </div>
+          );
         }
         const foto = fotos[tile.foto ?? 0];
         if (!foto) return null;

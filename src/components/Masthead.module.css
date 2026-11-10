@@ -24,6 +24,45 @@
   background: var(--gold);
 }
 
+.marca {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 6px;
+  padding: 8px;
+  color: var(--paper);
+  text-align: center;
+}
+
+.tile .logo {
+  width: auto;
+  height: clamp(56px, 9vw, 120px);
+  object-fit: contain;
+}
+
+.nomeMarca {
+  display: grid;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(0.6875rem, 0.5rem + 0.4vw, 0.875rem);
+  line-height: 1.2;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.nomeMarca span {
+  font-weight: 500;
+  font-size: 0.85em;
+  letter-spacing: 0.32em;
+  opacity: 0.75;
+}
+
+@media (max-width: 800px) {
+  .nomeMarca {
+    display: none;
+  }
+}
+
 .deriva {
   animation: deriva 20s ease-in-out infinite alternate;
 }
