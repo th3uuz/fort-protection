@@ -11,7 +11,7 @@ const app = (name) => path.join(root, "src", "app", name);
 fs.mkdirSync(path.join(root, "public", "images"), { recursive: true });
 
 const treat = (img) =>
-  img.grayscale().modulate({ brightness: 1.2 }).linear(1.05, 0);
+  img;
 
 const jpeg = { quality: 78, mozjpeg: true };
 
