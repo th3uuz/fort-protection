@@ -12,7 +12,7 @@
 ## Pendências do cliente
 - Endereço completo (hoje: "Rua, Jaracatia - São Paulo"). JSON-LD sem endereço até confirmar.
 - CNPJ real (42.601.564/0001-20) em `src/lib/site.ts`; rodapé também traz o crédito "Desenvolvido por: @dev.lacerda" com link para o Instagram.
-- Provedor de e-mail do formulário: EmailJS ou Resend (decisão do usuário).
+- Provedor de e-mail do formulário: Resend (único), via `src/app/api/contato/route.ts`.
 - Textos provisórios para validação: FAQ e serviços sem base em `info.md` (Mensageiro/Recepcionista, Zeladoria, Manutenção, Jardinagem, Controlador de acesso, Manobrista).
 - Depoimentos: atribuição nome/texto ambígua no site antigo, mantida como está por decisão do usuário.
 
@@ -34,9 +34,7 @@
 - Intro, "O que inclui" e dúvidas de todos os 11 serviços.
 
 ## Formulário de contato (subtarefa 6)
-- `src/lib/contact.ts` expõe `sendContact()`. Provedor escolhido por `NEXT_PUBLIC_CONTACT_PROVIDER` (`emailjs` ou `resend`). Variáveis em `.env.example`.
-- EmailJS: preencher `NEXT_PUBLIC_EMAILJS_SERVICE_ID`, `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` e `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`. O template recebe `nome`, `email`, `telefone`, `mensagem` e `pedido`.
-- Resend: chave secreta não pode ir para o navegador. Ao escolher Resend, criar a rota `src/app/api/contato/route.ts` (o formulário já envia POST JSON para `/api/contato`) com a chave em variável de ambiente do servidor.
+- `src/lib/contact.ts` expõe `sendContact()`. Envia para `/api/contato` (Resend). Variáveis em `.env.example`.
 - Sem provedor configurado, o formulário mostra os botões de WhatsApp e e-mail com o pedido já escrito.
 
 ## Para o cliente validar (lista final)
