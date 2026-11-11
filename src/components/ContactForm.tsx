@@ -80,7 +80,8 @@ export default function ContactForm() {
 
   const aoEnviar = async (evento: React.FormEvent<HTMLFormElement>) => {
     evento.preventDefault();
-    const dados = new FormData(evento.currentTarget);
+    const formulario = evento.currentTarget;
+    const dados = new FormData(formulario);
     const nome = String(dados.get("nome") ?? "");
     const email = String(dados.get("email") ?? "");
     const telefone = String(dados.get("telefone") ?? "");
@@ -100,6 +101,10 @@ export default function ContactForm() {
     setEstado("enviando");
     const resultado = await sendContact({ nome, email, telefone, mensagem, pedido });
     if (resultado.ok) {
+      formulario.reset();
+      setSegmento("");
+      setOutroLocal("");
+      setServicosSel([]);
       setEstado("sucesso");
       return;
     }
@@ -116,15 +121,6 @@ export default function ContactForm() {
     .join("\n");
   const whatsapp = `${site.whatsapp}?text=${encodeURIComponent(textoFinal)}`;
   const email = `mailto:${site.email}?subject=${encodeURIComponent("Pedido de orçamento")}&body=${encodeURIComponent(textoFinal)}`;
-
-  if (estado === "sucesso") {
-    return (
-      <div className={styles.status} role="status">
-        <p className={styles.statusTitulo}>Pedido enviado.</p>
-        <p>Recebemos sua solicitação e vamos responder no horário de atendimento.</p>
-      </div>
-    );
-  }
 
   return (
     <form className={styles.form} onSubmit={aoEnviar} noValidate>
@@ -289,6 +285,12 @@ export default function ContactForm() {
         </button>
         <p className={styles.privacidade}>Usamos seus dados só para responder a este pedido.</p>
       </div>
+
+      {estado === "sucesso" ? (
+        <div className={styles.status} role="status">
+          <p>Agradecemos a sua solicitação, nossa equipe irá entrar em contato o mais rápido possível.</p>
+        </div>
+      ) : null}
 
       {estado === "falha" ? (
         <div className={styles.status} role="status">
