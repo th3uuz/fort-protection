@@ -317,6 +317,9 @@
     grid-row: 1;
   }
 
+  .heroAcoes :global(.btn) {
+    display: none;
+  }
 }
 
 .heroAcoes :global(.btn) {

@@ -95,20 +95,6 @@
     color: #fff;
   }
 
-  .banner .acoes {
-    display: flex;
-    margin-top: 8px;
-  }
-
-  .banner .acoes :global(.btn) {
-    background: var(--paper);
-    color: var(--navy);
-  }
-
-  .banner .acoes :global(.btn):hover {
-    background: var(--bg-3);
-    color: var(--navy);
-  }
 }
 
 @media (max-width: 800px) {
